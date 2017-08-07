@@ -8,12 +8,12 @@ All other contributions:
 Copyright (c) 2017, the respective contributors, and author(s) of respective citations.
 All rights reserved.
 
-This repository uses a shared copyright model: each contributor holds copyright over
-their contributions to the repository. The project versioning records all such
-contribution and copyright details. If a contributor wants to further mark
+This repository uses a shared copyright model: each contributor holds copyright
+over their contributions to the repository. The project versioning records all
+such contribution and copyright details. If a contributor wants to further mark
 their specific copyright on a particular contribution, they should indicate
 their copyright in the commit message of the change when it is committed, as a
-markup within the schematic, or as a header to a file.
+markup within the schematic, or as a file header.
 
 
 LICENSE
