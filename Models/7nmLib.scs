@@ -1,0 +1,58 @@
+library 7nmLib.scs
+///////////////////////////////////////////
+// Process corners 
+///////////////////////////////////////////
+  section=TT
+    simulator lang=spectre
+    parameters wmin=2.7e-8 lmin=2.0e-8
+
+    parameters dVthN_MM=0 dVthN_PC=0             // MC Gaussian RV's
+    parameters dVthP_MM=0 dVthP_PC=0             // MC Gaussian RV's
+
+    // Matching parameters - these need to be updated accordingly
+    parameters AvtN_Mismatch=1.2e-9 AvtN_Process=1.2e-9   // 1.2 mV-um
+    parameters AvtP_Mismatch=1.2e-9 AvtP_Process=1.2e-9   // 1.2 mV-um
+
+    include "TT.scs"
+  endsection
+///////////////////////////////////////////
+  section=Monte
+      statistics {
+         process {
+            vary dVthN_PC  dist=gauss std=1
+            vary dVthP_PC  dist=gauss std=1
+         }
+         mismatch {
+            vary dVthN_MM  dist=gauss std=1
+            vary dVthP_MM  dist=gauss std=1
+         }
+      }
+  endsection
+///////////////////////////////////////////
+
+///////////////////////////////////////////
+// Please download the ASAP7 PDK for the
+// original, complete, and unmodified 
+// set of SPICE models.
+// http://asap.asu.edu/asap/
+///////////////////////////////////////////
+//  section=FF
+//    simulator lang=spectre
+//    include "7nm_FF.scs"
+//  endsection
+    
+//  section=SS
+//    simulator lang=spectre
+//    include "7nm_SS.scs"
+//  endsection
+
+//  section=FS
+//    simulator lang=spectre
+//    include "7nm_FS.scs"
+//  endsection
+
+//  section=SF
+//    simulator lang=spectre
+//    include "7nm_SF.scs"
+//  endsection
+endlibrary

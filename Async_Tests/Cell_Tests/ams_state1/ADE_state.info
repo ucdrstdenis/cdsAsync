@@ -1,0 +1,3 @@
+projectDir = '"/tmp/simulation"
+designInfo = '("Async_Tests" "Cell_Tests" "config" "ams")
+descriptionText = "None"

@@ -1,0 +1,47 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;               CADENCE CUSTOMIZATION
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; CIW Customizations
+ciw = hiGetCIWindow()
+ciw->warpPointer = nil
+maxXY = hiGetMaxScreenCoords()
+maxX = car(maxXY)
+maxY = cadr(maxXY)
+ciwXright = fix(maxX * 0.95)
+ciwXleft = fix(maxX * 0.05)
+ciwYtop = fix(maxY * 0.9)
+ciwYbottom = fix(maxY * 0.1)
+hiResizeWindow(hiGetCIWindow() list(ciwXleft:ciwYbottom ciwXright:ciwYtop))
+
+Host = getShellEnvVar("HOSTNAME")
+User = getShellEnvVar("USER")
+
+;SimDir = getShellEnvVar("MY_SIM_DIR")
+;envSetVal("asimenv.startup" "projectDir" 'string SimDir)
+
+;Define the text editor
+editor = "gedit";
+
+; Set the Undo Limit
+hiSetUndoLimit(20)
+
+;; Uncomment line below for distributed sim
+envLoadFile("./.cdsenv")
+asiSetEnvOptionVal( asiGetTool('ams) 'modelFiles '(("./Models/7nmLib.scs" "TT")) )
+
+;hiResizeWindow(window(1) list(200:95 950:300))
+;hiResizeWindow(window(1) list(1:25 800:200))
+ddsOpenLibManager()
+
+; Add folder to look for skill scripts in
+setSkillPath('("." "~" "./skill/"))
+
+; Auto update CDF term order upon saving
+envSetVal("auCore.misc" "updateCDFtermOrder" 'boolean t)
+;loadi("CCScheckAndUpdateCDF.il")
+
+; Auto load ocean scripts after ADEXL simultion
+;load("abXLRunAfterSim.ils")
+;abXLRunAfterSimInit()
+

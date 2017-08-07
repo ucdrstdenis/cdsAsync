@@ -1,0 +1,75 @@
+(envOpts SpecialHandleForDigLibDirs) nil
+(envOpts SpecialHandleForDigLibFiles) nil
+(envOpts SpecialHandleForDigitalBlock) nil
+(envOpts alwaysUseIeSetup) nil
+(envOpts amsIEsList) ((t "global" "" "/vdd!" "connectLib.CR_dynsup_full_fast" "" "logic" "connrules=connectLib.CR_dynsup_full_fast;discipline=logic;vddnet=/vdd!;vsupmin=0.036;vssnet=/gnd!;tr=12p;vtol=(`vthi-(`vtlo))/10;" "Built-in"))
+(envOpts autoConfigNameForConfigCreation) "auto_config"
+(envOpts autoDisplay) t
+(envOpts builtinuser) nil
+(envOpts cleanSnapShot) (nil)
+(envOpts cmd64bit) t
+(envOpts compatMode) "spectre"
+(envOpts compileCRsForPlugin) "explicitsOrMaster"
+(envOpts compileVAAsVAMS) (nil)
+(envOpts connectRulesPath) ""
+(envOpts constraintListForConfigCreation) ""
+(envOpts createCompleteDesignInfoFile) nil
+(envOpts defaultVsupForVAR) "1.8"
+(envOpts disableRunModeInDP) nil
+(envOpts edenCrCell) ""
+(envOpts edenCrLib) ""
+(envOpts edenCrView) ""
+(envOpts edenGlobalCell) "cds_globals"
+(envOpts edenGlobalLib) ""
+(envOpts edenGlobalView) ""
+(envOpts edenHostMode) "Local"
+(envOpts edenRemoteHost) ""
+(envOpts edenRunNetlistOnly) (t nil)
+(envOpts edenRunOpts) "GUI"
+(envOpts edenSaveExistingDirectories) t
+(envOpts edenSnapShotCell) ""
+(envOpts edenSnapShotLib) ""
+(envOpts edenSnapShotView) ""
+(envOpts edenSubmissionStr) ""
+(envOpts edenWaveformTool) "SimVision"
+(envOpts emAnaType) "Dynamic"
+(envOpts emLayerMap) ""
+(envOpts emTechFile) ""
+(envOpts emirEnable) nil
+(envOpts emirEnable_static) nil
+(envOpts emirSumList) nil
+(envOpts enableArclength) nil
+(envOpts enableDiagnose) nil
+(envOpts enableNoiseRefactor) t
+(envOpts enablePhaseNoiseBW) t
+(envOpts exportOceanScriptWithNetlistDirSupport) nil
+(envOpts invocationStyle) "irun"
+(envOpts macroModelEnable) nil
+(envOpts macroModelList) nil
+(envOpts netlisterMode) "AMS-UNL"
+(envOpts outputSelectionTextOnTop) "auto"
+(envOpts paramRangeCheckFile) ""
+(envOpts pllPlugin) ""
+(envOpts pllWizardinfo) ""
+(envOpts pspiceIncludeStatementInModelFile) nil
+(envOpts restartFlag) (nil)
+(envOpts rule) "ConnRules_18V_full_fast"
+(envOpts runCompOnly) (t nil)
+(envOpts runElabOnly) (t nil)
+(envOpts runOpts) "Batch (normal)"
+(envOpts runSimOnly) (t)
+(envOpts saveStartTime) ""
+(envOpts saveStopTime) ""
+(envOpts saveTimeInterval) ""
+(envOpts saveTimes) ""
+(envOpts selectRules) "Built-in"
+(envOpts snapshot) ""
+(envOpts snapshotPrefix) ""
+(envOpts solver) "Spectre"
+(envOpts stopListForConfigCreation) "spectre"
+(envOpts termDirectionMismatch) "ignore"
+(envOpts termMismatch) "ignore"
+(envOpts useIeSetup) t
+(envOpts useNetlisterModeOpt) t
+(envOpts vcoType) ""
+(envOpts viewListForConfigCreation) "spectre spice pspice verilog verilogams behavioral functional systemVerilog schematic veriloga vhdl vhdlams wreal"

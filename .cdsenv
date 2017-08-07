@@ -1,0 +1,128 @@
+license	VLSL_UseNextLicense     string "always"
+license	ADEL_UseNextLicense     string "always"
+license	ADEXL_UseNextLicense    string "always"
+license VLSXL_UseNextLicense    string "always"
+license VSEL_UseNextLicense     string "always"
+license	VSELicenseCheckoutOrder	string "XL, L"
+license VLSLicenseCheckoutOrder string "GXL, XL, L"
+license ADELicenseCheckoutOrder string "XL, L, GXL"
+
+;;-----------------------------------
+;; TechLib Rules 
+;;-----------------------------------
+layout	xSnapSpacing	float	0.001
+layout	ySnapSpacing	float	0.001
+;;-----------------------------------	
+
+graphic schematicDefaultTier string "XL"
+ui undoLevel int 40
+auCore.misc createCDFtermOrder boolean t
+auCore.misc updateCDFtermOrder boolean t
+
+schematic schDynamicNetHilightOn           boolean t
+schematic srcSolderOnCrossover             cyclic "ignored"
+schematic symbolPinUsage                   string "block"
+schematic statusBannerXY                   boolean t
+schematic pinLabelOverbar                  boolean t
+schematic pinLabelSetOverbar               boolean t
+schematic schMaxDragFig                    int     100
+schematic descendCanvasType                string "new tab"
+schematic schDynamicNetHilightColorAlt     string "white"
+schematic schDynamicNetHilightColor        string "blue"
+	
+asimenv.startup projectDir                 string "/tmp/simulation"
+asimenv saveDir                            string "./.artist_states"
+asimenv saveAsCellview                     boolean t
+asimenv designEditMode                     boolean t
+asimenv.misc saveDefaultsToOCEAN           boolean nil
+asimenv retainStateSettings                cyclic "all"
+
+asimenv.plotting resizeMode                string "auto"
+asimenv.startup simulator                  string "ams"
+asimenv.plotting specMarkers               boolean t 
+asimenv.startup copyDesignVarsFromCellview boolean t
+asimenv.startup useBurst                   boolean nil
+asimenv.startup hostMode                   string "local" ;;;"distributed"
+asimenv.distributed remoteShell            string "rsh"
+asimenv.distributed logsDir                string "/tmp/simulation/distributedLogs"
+asimenv.distributed deleteJob              boolean t
+asimenv.distributed queueName              string "myQueue"
+asimenv.distributed loginShell             cyclic "sh"
+asimenv.distributed showMessages           boolean t
+asimenv.distributed jobArgsInOceanScript   boolean t
+asimenv.distributed copyNetlist            boolean t 
+asimenv.distributed autoJobSubmit          boolean t
+asimenv.distributed emailNotify            boolean nil
+;asimenv.distributed copyMode              boolean t
+;asimenv.distributed copyModeDir           string "/tmp2"
+
+ams.envOpts compileCRsForPlugin            string "explicitsOrMaster"
+;ams.envOpts matlabStartDir                string "./matlab"
+ams.outputs simOutputFormat                string "psfxl"
+ams.elabOpts dresolution                   boolean t  
+amsDirect.vlog checkAndNetlist             boolean t
+amsDirect.vlog compileAsAMS                boolean t  
+amsDirect.prep detailedDisciplineRes       boolean t
+;ams.outputs useOtherOutputFormat          boolean t
+;ams.netlisterOpts preferMEOverImplicit    boolean t
+
+spectre.envOpts modelFiles                 string "./Models/7nmLib.scs"
+spectre.envOpts firstRun                   boolean nil
+adexl.setupdb saveDir                      string "./"
+adexl.setupdb useNMPForMapping             boolean nil	
+
+adexl.historyNamePrefix showNameHistoryForm boolean t
+adexl.icrpStartup binaryName               string "virtuoso -nocdsinit -nograph"
+adexl.icrpStartup startMaxJobsImmediately  boolean nil
+
+adexl.distribute createUniqueLogsDirForICRPLogs  boolean nil
+adexl.distribute useSameProcess                  boolean nil
+adexl.distribute inferCommandICRPStatusFromProxy cyclic "Never"
+adexl.distribute generateJobFileOnlyOnError      boolean nil
+adexl.distribute jobFileDir                      string "/tmp/simulation"
+adexl.distribute defaultPerRunNumJobs            int 6
+adexl.distribute enableICRPReconnect             boolean nil
+adexl.distribute continueICRPRunOnAbruptGUIExit  boolean nil
+adexl.test autoCopyCellviewVars                  boolean t
+;adexl.distribute useAllLingeringJobs            boolean t
+
+adexl.oceanxl includeSimLogInJobLog          boolean t
+adexl.monte applySaveOptionsToNetlist        boolean t
+adexl.monte saveProcessOptionDefaultValue    boolean t
+adexl.monte saveMismatchOptionDefaultValue   boolean t 
+adexl.monte minGroupSizeSplitAcrossIdleJobs  int 2
+adexl.monte enableCompactMismatchResultFiles boolean t
+adexl.monte savedatainseparatedir            boolean t
+
+adexl.gui significantDigits             int 5
+adexl.gui confirmReEvaluationWhen       cyclic "Always"
+adexl.gui openDesignAccessMode          cyclic "w" 
+adexl.gui showSimLogForOnePointSim      boolean nil
+adexl.gui sendOutputsToEEFilter         cyclic "All" ;"Expressions"  
+adexl.gui openSchInWin                  boolean nil ; open in new window
+adexl.gui setupFormDefaultLoadOperation cyclic "overwrite" ;"merge", "retain" 	
+adexl.gui enableAutoRefreshPointsTable  boolean 	t
+adexl.gui enableAutoRefreshSetupSummary boolean t 
+adexl.gui copyMeasurementScripts        boolean nil
+
+adexl.results retainReferenceSimResults boolean t
+adexl.results saveDir                   string "/tmp/simulation"
+adexl.results saveResDir                string "/tmp/simulation"
+adexl.results saveResultsFromHistoryDir string "/tmp/simulation"
+
+adexl.simulation saveBestPointsStrategy      cyclic "Save all design points" 
+adexl.simulation sortVariableValues          boolean t
+adexl.simulation saveRawData                 cyclic "Save all points" 
+adexl.simulation setCurrentRunPostSimulation boolean t 
+
+adexl.simulation createCompositeSimLogFileWhenSimCountFewerThan int 1
+adexl.simulation saveNetlistData cyclic "Save all points" ; "Save none"
+adexl.simulation setCurrentRunPostSimulation boolean t ;; set t for post process 
+
+designEditor.fileSpec deOpenFormAccessModeAlwaysRead boolean nil
+designEditor.fileSpec deDefaultWindowStyle           cyclic "new tab"
+
+viva.trace lineThickness    string "medium"
+viva.trace lineStyle        string "solid"
+viva.application enablertsf string "true"
+

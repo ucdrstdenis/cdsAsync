@@ -1,0 +1,13 @@
+--pcdbVlog file, Rev:1.0
+
+--TIMESTAMP: 1496380804
+
+#CELL
+* QDI2Bin_1of4 *
+DataReceive
+
+#CELL
+* Bin2QDI_1of4 *
+DataTransmit
+CtrlTransmit
+

@@ -1,0 +1,91 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;          Top portion generated using ADE-L -> Session-> Save Ocean Script
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+simulator( 'ams )
+solver( 'Spectre )
+hostMode( 'distributed )
+design(	 "simulation/Buffer_Test/ams/config/netlist/netlist")
+ocnAmsSetUnlNetlister()
+resultsDir( "simulation/Buffer_Test/ams/config" )
+globalSignal(?name "vdd!" ?lang "CDBA" ?wireType "wire" ?discipline "" ?ground "NO")
+globalSignal(?name "VDDT!" ?lang "CDBA" ?wireType "wire" ?discipline "" ?ground "NO")
+globalSignal(?name "gnd!" ?lang "CDBA" ?wireType "wire" ?discipline "" ?ground "YES")
+modelFile( '("./Models/7nmLib.scs" "TT") )
+analysis('tran ?stop "1m"  ?errpreset "conservative"  
+		?readic "simulation/Buffer_Test/ams/config/netlist/buffers_700mV.fc"
+)
+envOption(
+	'useIeSetup  t 
+	'amsIEsList  '((t "global" "" "/vdd!" "connectLib.CR_dynsup_full_fast" "" "logic" "connrules=connectLib.CR_dynsup_full_fast;discipline=logic;vddnet=/vdd!;vsupmin=0.034;vssnet=/gnd!;tr=12p;vtol=(`vthi-(`vtlo))/10;" "Built-in")) 
+	'builtinuser  nil 
+	'cmd64bit  t 
+)
+option(	'icpriority  "file" 
+	'temp  "25.0" 
+)
+option( ?categ 'amsTurboOpts
+	'numThreads  "4" 
+	'mtOption  "Manual" 
+	'uniMode  "APS" 
+)
+option( ?categ 'elaborator
+	'unitsSimPrecision  "ps" 
+	'unitsSimTime  "ps" 
+)
+saveOption( ?infoOptions list(list("modelParameter" "models" "rawfile" "" "" "" t) list("element" "inst" "rawfile" "" "" "" t) list("outputParameter" "output" "rawfile" "" "" "" t) list("designParamVals" "parameters" "rawfile" "" "" "" t) list("primitives" "primitives" "rawfile" "" "" "" nil) list("subckts" "subckts" "rawfile" "" "" "" nil) list("asserts" "assert" "rawfile" "" "" "" nil) list("extremeinfo" "all" "logfile" "" "yes" "" nil) list("<Click_To_Add>" "none" "rawfile" "" "" "" nil) ) )
+save( 'v "/L0<3>" "/Le0" "/R0<3>" "/Re0" "/L1<1>" "/Le1" "/R1<1>" "/Re1" "/L2<3>" "/Le2" "/R2<3>" "/Re2" "/L3<1>" "/Le3" "/R3<1>" "/Re3" "/L4<3>" "/Le4" "/R4<3>" "/Re4" "/L5<1>" "/Le5" "/R5<1>" "/Re5" "/RESET<0>" "/RESET<1>" "/RESET<3>" "/RESET<2>" "/RESET<4>" "/RESET<5>" )
+save( 'i "/VMAIN/MINUS" "/BUFF<0>/VDD" "/BUFF<1>/VDD" "/BUFF<2>/VDD" "/BUFF<3>/VDD" "/BUFF<4>/VDD" "/BUFF<5>/VDD" )
+
+temp( 25.0 )
+desVar(	  "vdd" 700m	)
+desVar(	  "Cnd" 0.14858f	)
+desVar(	  "Cng" 0.068833f	)
+desVar(	  "Cpd" 0.14858f	)
+desVar(	  "Cpg" 0.068833f	)
+desVar(	  "Cmult" 0.48	)
+desVar(	  "Csl" 0 )
+desVar(	  "Csr" 0 )
+desVar(	  "Cw" 0.030f	)
+desVar(   "RESET_HOLD" 2M )
+desVar(   "N_TOKENS" 30 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;      Template for sweeping process, voltage and temperature 
+;;      using distributed processing
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; List of voltage, corner, and temperature points to run
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+vList1 = list(0.065 0.075 0.09 0.100 0.125 0.150 0.175 0.200 0.225 0.250 0.275 0.300 0.325 0.350 0.375 0.400 0.425 0.450)
+vList2 = list(0.475 0.500 0.525 0.550 0.575 0.600 0.625 0.650 0.675 0.700 0.725 0.750 0.775 0.800 0.850 0.900 0.950)
+vList  = list(vList1 vList2)
+tList  = list(-50 -25 0 25 50 75 100 125)
+cornerList = list( "TT" "FF" "SS" "FS" "SF" )
+jobTitle   = strcat( "Buffers_")
+
+foreach(corner cornerList
+    modelFile(`("./Models/7nmLib.scs" , corner))
+    jobList   = nil
+
+    foreach( degC  tList
+        foreach( suppList vList
+
+            foreach( val  suppList
+                desVar( "vdd" val )
+                temp(degC)
+
+                ;; Example resulting jobName: "Buffers_325mV_25C_TT"
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                mVs     = round( evalstring( desVar( "vdd" )) * 1000 )
+                jobName = strcat( jobTitle  sprintf( nil "%d" mVs ) "mV_" sprintf( nil "%d" degC) "C_" corner )
+
+                ;; Run distributed - Automatic host submission
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                jobList = append1( jobList run( ?jobName jobName ?queue "myQueue" ) )
+
+            )
+        )
+    )
+)
+printf("Completed Job Submissions.")

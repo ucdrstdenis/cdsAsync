@@ -1,0 +1,4 @@
+hnlVerilogIOInitStimulusStr  = "0"
+simVerilogIncrementalNetlistConfigList = "t"
+hnlHandleMultiplePlaceMaster = "ignore"
+hnlConfigMissingViewAction = "error" ; "warning"

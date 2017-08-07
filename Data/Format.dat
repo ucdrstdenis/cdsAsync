@@ -1,0 +1,35 @@
+Data Format within file:
+Line  1  = Cell Metadata (i.e. transistor count, area, etc)
+Line  2  = Cell Data Headers
+Lines 3+ = Cell Data Points, 1 point per line
+
+#############################################
+
+Data Format for Cells:
+Col 1 = Vdd [mV]
+Col 2 = Temp [C]
+Col 3 = Leakage [nA]
+Col 4 = Forward Latency Up [ns]
+Col 5 = Forward Latency Down [ns]
+Col 6 = Backward latency Up [ns]
+Col 7 = Backward Latency Down [ns]
+Col 8 = Cycle Time (measured at dynamic slack) [ns]
+Col 9 = Energy per Cycle [fJ]
+
+TODO:
+Col 10 = Probability of Timing Failure (violation of isochronic-fork)
+
+Data Format for SRAM:
+Col 1  = Vdd [mV]
+Col 2  = Temp [C]
+Col 3  = Leakage [nA]
+Col 4  = Read Forward Latency [ns]
+Col 5  = Write Forward Latency [ns]
+Col 6  = Read Cycle Time [ns]
+Col 7  = Write Cycle Time [ns]
+Col 8  = Read Cycle Energy [fJ]
+Col 9  = Write Cycle Energy (worse case, all bits flip) [fJ]
+
+TODO:
+Col 10 = Bit Error Rate
+
