@@ -65,10 +65,10 @@ always @(posedge |L) begin
                     wait( L == 3'b100); 
                     dout <= 2'b10; 
                 end
-		default begin
-	   		$display(" %M: Received invalid DI code from circuit: %b. Check for errors @time %t ps.", L, $time);
-	   		dout <= 2'bx;
-		end
+        default begin
+            $display(" %M: Received invalid DI code from circuit: %b. Check for errors @time %t ps.", L, $time);
+            dout <= 2'bx;
+        end
     endcase
     Le     <= #D2 1'b0;
 end

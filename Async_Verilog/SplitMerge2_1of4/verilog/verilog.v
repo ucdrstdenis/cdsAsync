@@ -58,7 +58,7 @@ task SendTokens;
         CxReg <= ctrl;
         goReg <= 1'b1;
         $display("%M:  %t ps - Sent token w/ data = %b.", $time, TxReg);
-		@(negedge goReg);
+        @(negedge goReg);
     end
 endtask
 

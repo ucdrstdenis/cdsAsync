@@ -5,10 +5,10 @@
 ////////////////////////////////////////////////////////////
 module Bin2QDI_1of2(R, din, req, Re, RESET, VDD, GND);
 
-output[1:0] R;   	// Right Output (e1of2) - to circuit
-input Re;		    // Right enable         - from circuit
-input din;		    // Data In  (binary);     comes from verilog
-input req;		    // Reqest                 comes from verilog
+output[1:0] R;      // Right Output (e1of2) - to circuit
+input Re;           // Right enable         - from circuit
+input din;          // Data In  (binary);     comes from verilog
+input req;          // Reqest                 comes from verilog
 input RESET;        // comes from verilog
 inout VDD, GND;
 
@@ -31,9 +31,9 @@ parameter idle=0, requesting=1, resetting=2;
 task CheckRequest;
 begin
     if (state==requesting) begin
-	    $display("Bin2QDI_1of2: Waiting on re. Possible driving error @time %t", $time);
+        $display("Bin2QDI_1of2: Waiting on re. Possible driving error @time %t", $time);
     end  else if (state==resetting) begin
-	    wait (Re);  
+        wait (Re);  
     end
 end
 endtask
@@ -43,10 +43,10 @@ begin
     if (state==requesting) begin
         $display("Bin2QDI_1of2: Early reset. Possible driving error @time %t", $time);
         // wait(~Re);
-	    R <= #D2 2'b00;
-	    state = resetting;
+        R <= #D2 2'b00;
+        state = resetting;
     end else if (state==resetting) begin
-    	wait (Re);  
+        wait (Re);  
     end
 end
 endtask
@@ -55,20 +55,20 @@ endtask
 //	Main Description
 ////////////////////////////////////////////////////////////
 initial begin
-	R <= 2'b00;
-	state = idle;
+    R <= 2'b00;
+    state = idle;
 end
 
 always @(posedge RESET or negedge RESET) begin
     R  <= #D2 2'b00; 
-	state = idle;
+    state = idle;
 end
 
 // Trigger on incoming request from verilog
 always @(posedge req) begin	
-	CheckRequest;               // Check for driver timing errors
-    R  <= #D1 {din,~din};       // 0 -> 01, 1-> 10
-    state  = requesting;        // Track state for debugging
+    CheckRequest;            // Check for driver timing errors
+    R  <= #D1 {din,~din};    // 0 -> 01, 1-> 10
+    state  = requesting;     // Track state for debugging
 end
 
 always @(negedge req) begin
@@ -77,7 +77,7 @@ always @(negedge req) begin
 end
 
 always @(negedge Re) begin
-	state  = resetting;
+    state  = resetting;
     R  <= #D2 2'b00;
 end
 

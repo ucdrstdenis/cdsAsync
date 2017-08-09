@@ -33,17 +33,17 @@ assign RESET = resetReg;
 task Init;
     begin
         resetReg <= 1'b1;  // Reset not asserted yet
-        goReg <= 1'b0;  // Nothing being sent yet
-        TxReg <= 1'b1; // Clear Tx Data Register
+        goReg <= 1'b0;     // Nothing being sent yet
+        TxReg <= 1'b1;     // Clear Tx Data Register
         CxReg <= 1'b1;
-        RxReg <= 1'b0;  // Clear Rx Data Register
+        RxReg <= 1'b0;     // Clear Rx Data Register
 
         #1; // Allow initial and final conditions to be interchangable
         $display("%M:  %t ps - Asserting Reset...", $time); 
-        resetReg <= 1'b0;  // Assert Reset
+        resetReg <= 1'b0;  
         #RST_HOLD;         
         $display("%M:  %t ps - De-Asserting Reset...", $time); 
-        resetReg <= 1'b1;  // Stop Asserting Reset
+        resetReg <= 1'b1;
         #RST_HOLD;
     end
 endtask
@@ -58,7 +58,7 @@ task SendTokens;
         CxReg <= ctrl;
         goReg <= 1'b1;
         $display("%M:  %t ps - Sent token w/ data = %b.", $time, TxReg);
-		@(negedge goReg);
+        @(negedge goReg);
     end
 endtask
 

@@ -59,12 +59,12 @@ always @(posedge |L) begin
                    wait( L == 2'b10);
                    dout <= 1'b1;
                end   
-	    default begin
-	       $display("QDI2Bin1of2: Received invalid DI code from circuit: %b. Check for errors @time %t ps", L, $time);
-	       dout <= 1'bx;
-	    end
+        default begin
+            $display("QDI2Bin1of2: Received invalid DI code from circuit: %b. Check for errors @time %t ps", L, $time);
+            dout <= 1'bx;
+        end
     endcase
-    Le    <= #D2 1'b0;
+    Le  <= #D2 1'b0;
 end
 
 endmodule

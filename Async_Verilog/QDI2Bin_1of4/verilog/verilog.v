@@ -60,7 +60,7 @@ always @(posedge |L) begin
         4'b0010: dout <= 2'b01;
         4'b0100: dout <= 2'b10;
         4'b1000: dout <= 2'b11;
-		4'b000x: begin      // Avoid error message @ STV's
+        4'b000x: begin      // Avoid error message @ STV's
                      wait( L == 4'b0001 );
                      dout <= 2'b00;
                  end
@@ -76,12 +76,12 @@ always @(posedge |L) begin
                      wait( L == 4'b1000);
                      dout <= 2'b11;  
                  end
-		default begin
-	   		$display("DI2Bin_1of4:Received invalid DI code from circuit: %b. Check for errors @time %t ps.", L, $time);
-	   		dout <= 2'bx;
-		end
+        default begin
+            $display("DI2Bin_1of4:Received invalid DI code from circuit: %b. Check for errors @time %t ps.", L, $time);
+            dout <= 2'bx;
+        end
     endcase
-    Le     <= #D2 1'b0;
+    Le <= #D2 1'b0;
 end
 
 endmodule
