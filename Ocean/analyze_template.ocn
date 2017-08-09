@@ -61,7 +61,7 @@ foreach(job jobList
     unless( (openResults( job ) == nil)
         unless( (selectResult( 'tran ) == nil)
 
-            PCFB_1of4_valList = getAll(getData("/BUFF<0>/VDD") getData("/L0<3>") getData("/Le0") getData("/R0<3>"))
+            PCFB_1of4_valList = getAll(IT("/BUFF<0>/VDD") VT("/L0<3>") VT("/Le0") VT("/R0<3>"))
             PCFB_1of2_valList = getAll(IT("/BUFF<1>/VDD") VT("/L1<1>") VT("/Le1") VT("/R1<1>"))
             PCHB_1of4_valList = getAll(IT("/BUFF<2>/VDD") VT("/L2<3>") VT("/Le2") VT("/R2<3>"))
             PCHB_1of2_valList = getAll(IT("/BUFF<3>/VDD") VT("/L3<1>") VT("/Le3") VT("/R3<1>"))
