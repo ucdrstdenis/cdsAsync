@@ -9,6 +9,7 @@
 *.log
 *.pak
 *.inca*
+*.DS_Store
 inca.*
 *.cdsvmod
 *.jpg
