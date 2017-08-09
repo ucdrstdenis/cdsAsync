@@ -1,2 +1,6 @@
 --pcdbVlog file, Rev:1.0
 
+#CELL
+* Bin2QDI_1of4 *
+TxEncoder<-1:0> 2
+
