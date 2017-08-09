@@ -1,6 +1,7 @@
 ## Cadence
 *.cadence
 .cadence
+*.v.bak
 *.png
 *.cdslck
 *.cdslck*
