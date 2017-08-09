@@ -1,0 +1,83 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 1) Build list of results directories to open
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+vList  = list(0.250 0.275 0.300 0.325 0.350 0.375 0.400 0.425 0.450 0.475 0.500 0.525 \
+              0.550 0.575 0.600 0.625 0.650 0.675 0.700 0.725 0.750 0.775 0.800 0.850 0.900 0.950)
+
+tList  = list( -50 -25 0 25 50 75 100 125 )
+cornerList = list( "TT" "FF" "SS" "FS" "SF" )
+
+foreach(corner cornerList
+
+    jobList = nil
+    temps   = nil
+
+    foreach( degC  tList
+        foreach( val  vList
+
+            mVs    = round( val * 1000 )
+            temps   = append1( temps sprintf(nil "%d" degC ))
+           
+            ;; Path to /psf, example : .../Buffer_Test/ams/config/distributed/Buffers_350mV_25C_TT/psf
+            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            jobName = strcat("/net/hostname/path/simulation/Buffer_Test/ams/config/distributed/Buffers_" \
+                          sprintf( nil "%d" mVs ) "mV_" sprintf( nil "%d" degC) "C_" corner "/psf" )
+            jobList = append1( jobList jobName)	
+    )
+)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+load("Skill/analyzeQDI.il")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 2) Create the output files + headers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Make sure /path/to/data/corner folders exist ahead of time
+;; Below creates 6 files per corner
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PCFB_1of4_fname = strcat( "/path/to/data/" corner "/PCFB_1of4_" corner ".dat" )
+PCFB_1of2_fname = strcat( "/path/to/data/" corner "/PCFB_1of2_" corner ".dat" )
+PCHB_1of4_fname = strcat( "/path/to/data/" corner "/PCHB_1of4_" corner ".dat" )
+PCHB_1of2_fname = strcat( "/path/to/data/" corner "/PCHB_1of2_" corner ".dat" )
+WCHB_1of4_fname = strcat( "/path/to/data/" corner "/WCHB_1of4_" corner ".dat" )
+WCHB_1of2_fname = strcat( "/path/to/data/" corner "/WCHB_1of2_" corner ".dat" )
+
+printHeaders(PCFB_1of4_fname "PCFB_e1of4")
+printHeaders(PCFB_1of2_fname "PCFB_e1of2")
+printHeaders(PCHB_1of4_fname "PCHB_e1of4")
+printHeaders(PCHB_1of2_fname "PCHB_e1of2")
+printHeaders(WCHB_1of4_fname "WCHB_e1of4")
+printHeaders(WCHB_1of2_fname "WCHB_e1of2")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 3) For each job in list, open results, measure + output to file
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+j = 0
+foreach(job jobList	
+    printf("%s\n" job )
+    unless( (openResults( job ) == nil)
+        unless( (selectResult( 'tran ) == nil)
+
+            PCFB_1of4_valList = getAll(getData("/BUFF<0>/VDD") getData("/L0<3>") getData("/Le0") getData("/R0<3>"))
+            PCFB_1of2_valList = getAll(IT("/BUFF<1>/VDD") VT("/L1<1>") VT("/Le1") VT("/R1<1>"))
+            PCHB_1of4_valList = getAll(IT("/BUFF<2>/VDD") VT("/L2<3>") VT("/Le2") VT("/R2<3>"))
+            PCHB_1of2_valList = getAll(IT("/BUFF<3>/VDD") VT("/L3<1>") VT("/Le3") VT("/R3<1>"))
+            WCHB_1of4_valList = getAll(IT("/BUFF<4>/VDD") VT("/L4<3>") VT("/Le4") VT("/R4<3>"))
+            WCHB_1of2_valList = getAll(IT("/BUFF<5>/VDD") VT("/L5<1>") VT("/Le5") VT("/R5<1>"))
+   
+            printToFile(PCFB_1of4_fname nth(j temps) PCFB_1of4_valList)
+            printToFile(PCFB_1of2_fname nth(j temps) PCFB_1of2_valList)
+            printToFile(PCHB_1of4_fname nth(j temps) PCHB_1of4_valList)
+            printToFile(PCHB_1of2_fname nth(j temps) PCHB_1of2_valList)
+            printToFile(WCHB_1of4_fname nth(j temps) WCHB_1of4_valList)
+            printToFile(WCHB_1of2_fname nth(j temps) WCHB_1of2_valList)
+        )
+    )
+    j = j + 1
+    )
+) ;; end corner
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+printf("Completed Analysis.")
