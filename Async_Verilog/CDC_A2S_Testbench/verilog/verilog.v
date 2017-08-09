@@ -1,5 +1,5 @@
 module CDC_A2S_Testbench (Tx, Txe, Din, Si, So, CLK, RESET, VDD, GND);
- // Still in progress ...
+ // Transfer 1 word / 4 cycles
 
 inout VDD, GND;
 output  RESET;
@@ -27,6 +27,9 @@ reg [DW-1:0] RxReg;
 wire [DW-1:0] dataRx;
 wire [(DW/2)-1:0] readDataValid;
 reg goReg;
+reg CLK;
+reg So;
+reg SiReg;
 
 integer TxTokenCount;
 integer RxTokenCount;
@@ -54,18 +57,20 @@ endtask
 
 task Init;
     begin
-        RESET    <= 1'b1;
-        goReg    <= 1'b0;
-        TxReg    <= {DW{1'b0}};
-        RxReg    <= {DW{1'b0}};
+        RESET  <= 1'b1;
+        goReg  <= 1'b0;
+        TxReg  <= {DW{1'b0}};
+        RxReg  <= {DW{1'b0}};
 
         #1; // Allow initial and final conditions to be interchangable
-        $display("%M:  %t ps - Asserting Reset...", $time); 
+        $display("%M: %t ps - Asserting Reset...", $time); 
         RESET <= 1'b0;
     	#RST_HOLD;
         $display("%M: %t ps - De-Asserting Reset...", $time); 
     	RESET <= 1'b1;
     	#RST_HOLD;  
+        TxTokenCount = 0;
+        RxTokenCount = 0;
     end
 endtask
 
@@ -76,19 +81,41 @@ initial begin
     Init;
 
     for (i = 0; i < NO_TOKENS; i = i + 1) begin
-        SendTokens(2'b11);
+        SendTokens({DW{1'b0}});
     end
     
     wait(RxTokenCount==TxTokenCount);
-    wait(~validRx);
     #RST_HOLD;
     $finish();
 end
-
 
 always @(negedge |Txe) begin
     goReg <= 1'b0;
 end
 
+
+///////////////////////////////////////////////
+// Synchronous
+///////////////////////////////////////////////
+initial begin
+    CLK    <= 1'b0;
+    So     <= 1'b0;
+    SiReg  <= 1'b0;
+    forever begin
+        #CLK_PERIOD CLK = !CLK;
+    end
+end
+
+always @(posedge CLK) begin
+    SiReg <= Si;
+    if (SiReg == 1'b1 && So == 1'b0) begin
+        @(negedge CLK) So <= 1'b1;
+    end else if (SiReg == 1'b1 && So == 1'b1) begin
+        RxReg <= Din;
+        RxTokenCount = RxTokenCount + 1;
+    end else if (SiReg == 1'b0 && So == 1'b1) begin
+        @(negedge CLK) So <= 1'b0;
+    end
+end
 
 endmodule
