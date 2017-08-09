@@ -1,0 +1,159 @@
+//Verilog HDL for "Verilog", "BER_Testbench" "verilog"
+module SRAM_TEST_BANK_Testbench(A, AAck, RW, RWAck, 
+				                WriteData, WriteDataAck, 
+				                ReadData, ReadDataAck, 
+ 			 	                BitErrors, RESET, VDD,  VSS);
+inout VDD, VSS;
+input [1:0] WriteDataAck;
+input [7:0] ReadData;
+input [4:0] AAck;
+input RWAck;
+
+output [19:0] A;
+output [1:0] RW;
+output [7:0] WriteData;
+output [1:0] ReadDataAck;
+output [3:0] BitErrors;
+output RESET;
+
+////////////////////////////////////////////////
+//  Local Parameters & variables
+////////////////////////////////////////////////
+parameter RST_HOLD=1000;	    	// Hold reset this long [ps]
+parameter OP_WAIT=1000;
+
+////////////////////////////////////////////////
+//  Registers driving output & output decoders
+////////////////////////////////////////////////
+reg resetReg;
+reg [3:0] BitErrorReg;
+reg [9:0] AddrReg;
+reg [3:0] WriteDataReg;
+reg regHS;
+reg regHSW;
+reg RWReg;
+
+////////////////////////////////////////////////
+//  Registers storing data from input encoders
+////////////////////////////////////////////////
+reg  [3:0] ReadDataReg;
+wire [3:0] dataRx;
+wire [1:0] readDataValid;
+
+reg [3:0] lastDataWritten;
+reg DataWasRead;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// Output DI Decoders / Input BIN Encoders
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//BIN2DI_1of2          Template            (dout,      din,          ereq,    ack,          RESET,    VDD, VSS);
+  Bin2QDI_1of2          RWDecoder           (RW,        RWReg,        regHS,   RWAck,        resetReg, VDD, VSS);  
+  Bin2QDI_1of4          WriteDecoder [1:0]  (WriteData, WriteDataReg, regHSW,  WriteDataAck, resetReg, VDD, VSS); 
+  Bin2QDI_1of4          AddrDecoder  [4:0]   (A,         AddrReg,     regHS,   AAck,         resetReg, VDD, VSS);
+ 
+  QDI2Bin_1of4          ReadEncoder  [1:0] (dataRx,    readDataValid, ReadDataAck, ReadData, resetReg, VDD, VSS);
+  assign RESET = resetReg;
+
+////////////////////////////////////////
+//     TB Task Definitions
+////////////////////////////////////////
+task BankWrite;
+    input [9:0] address;
+    input [3:0] data;
+    begin
+        $display("Testbench: %t ps - Writing 0x%h to address 0x%h...", $time, data, address);
+        RWReg        <= 1'b0;
+        AddrReg      <= address;
+        WriteDataReg <= data;
+        regHS        <= 1'b1;
+        regHSW       <= 1'b1;
+        wait(~|WriteDataAck);    
+        wait(~RWAck);
+        $display("Testbench: %t ps - Waiting for reset pase of Write to complete", $time);
+		lastDataWritten <= data;
+		regHS           <= 1'b0;
+		regHSW	      	<= 1'b0;
+        //wait(~|AAck);
+         $display("Testbanch: %t ps = Waiting for WriteDataAcks", $time);
+        wait(&WriteDataAck);
+         $display("Testbanch: %t ps = Waiting for RWAck", $time);
+        wait(RWAck);
+
+        $display("Testbench: %t ps - Write complete", $time);
+    end
+endtask
+
+task BankRead;
+    input [9:0] address;
+    input [3:0] expectData;
+    begin
+        $display("Testbench: %t ps -  Reading address 0x%h...",$time, address);
+        RWReg   <= 1'b1;
+        AddrReg <= address;
+        regHS   <= 1'b1;
+        wait(~RWAck);
+        wait(DataWasRead);
+        $display("Testbench: %t ps - Waiting for reset phase of Read to complete", $time);
+        DataWasRead <= 1'b0;
+        regHS <= 1'b0;
+		BitErrorReg <= ReadDataReg^expectData;
+		wait(RWAck);
+        wait(&ReadDataAck);  
+  		BitErrorReg <= 4'b0;   
+		$display("Testbench: %t ps - Read Complete", $time);
+  end
+endtask
+
+task BankReset;
+    begin
+        $display("Testbench:  %t ps - Asserting Reset...", $time); 
+        resetReg <= 1'b0;
+    	#RST_HOLD;
+        $display("Testbench:  %t ps - Lowering Reset...", $time); 
+    	resetReg <= 1'b1;
+    	#RST_HOLD;  
+    end
+endtask
+
+task Init;
+    begin
+        resetReg     		<= 1'b1;
+        regHS        		<= 1'b0;
+        regHSW       		<= 1'b0;
+        RWReg        		<= 1'b0;
+        AddrReg      		<= 10'b0;
+        BitErrorReg       	<= 4'b0;
+        ReadDataReg      	<= 4'b0;
+        WriteDataReg 	   	<= 4'b0;
+		lastDataWritten 	<= 4'b0;
+        #1; // Allow initial and final conditions to be interchanged
+        BankReset;
+    end
+endtask
+
+/////////////////////////////////////////////////////////////////////////////////////
+//	Main Description
+/////////////////////////////////////////////////////////////////////////////////////
+initial begin
+    Init;
+    BankRead(  10'b0, lastDataWritten); #OP_WAIT;  // Read Address0, expect to read all zeros;
+    BankWrite( 10'b0, 4'hF);  	        #OP_WAIT;
+    BankRead(  10'b0, lastDataWritten); #OP_WAIT;  
+    BankWrite( 10'b0, 4'h0); 	        #OP_WAIT; 
+    BankRead(  10'b0, lastDataWritten); #OP_WAIT; 
+    $finish;  
+end
+////////////////////////////////////////
+//   Rx Always Blocks
+////////////////////////////////////////
+always @(posedge &readDataValid) begin
+     ReadDataReg <= dataRx;
+     $display("Testbench %t ps - Read data 0x%h", $time, dataRx);
+	if (^dataRx == 1'bx) begin
+	    $display("Testbench:  %t ps - Ignoring Rx'd Invalid Data 0x%h.", $time, dataRx);
+	end
+    DataWasRead <= 1'b1;
+end
+
+endmodule
