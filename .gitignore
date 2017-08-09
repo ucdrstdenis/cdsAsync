@@ -8,7 +8,8 @@
 *.DS_Store
 *.log
 *.pak
-*.inca
+*.inca*
+*.cdsvmod
 *.jpg
 *.-
 *.cfg%
