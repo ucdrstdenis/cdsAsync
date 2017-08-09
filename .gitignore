@@ -9,6 +9,7 @@
 *.log
 *.pak
 *.inca*
+inca.*
 *.cdsvmod
 *.jpg
 *.-
