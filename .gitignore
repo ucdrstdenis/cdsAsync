@@ -17,6 +17,12 @@ inca.*
 *.-
 *.cfg%
 
+## Cells not for commit
+*/CDC_S2A_*
+*/About_Contributors
+*/SRAM_TEST_BANK_Testbench
+
+
 ## C++
 # Prerequisites
 *.d
