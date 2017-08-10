@@ -475,7 +475,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/VDD"
+tmp1->signal = "/A2S/acd"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -490,7 +490,7 @@ tmp1->lastEvalTime = nil
 tmp1->origin = nil
 tmp1->sweepSet = nil
 tmp1->depList = nil
-tmp1->type = 'terminal
+tmp1->type = 'net
 tmp1->areaTable = nil
 tmp1->selectionDetail = (let
 (tmp1)
@@ -533,7 +533,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/en"
+tmp1->signal = "/A2S/ace"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -591,7 +591,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/net017"
+tmp1->signal = "/A2S/dtu_in<0,3:1>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -649,7 +649,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/out<1:0>"
+tmp1->signal = "/A2S/dtu_en<0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -707,7 +707,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_out<1:0>"
+tmp1->signal = "/A2S/CTRL/en"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -765,7 +765,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_r1<1:0>"
+tmp1->signal = "/A2S/CTRL/_siV"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -823,123 +823,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_r0<1:0>"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y7"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 15
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_r<1:0>"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y8"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 16
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/rv<1:0>"
+tmp1->signal = "/A2S/CTRL/_kc"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -975,7 +859,7 @@ tmp1->value = nil
 tmp1->plot = 't
 tmp1->save = 't
 tmp1->march = nil
-tmp1->index = 17
+tmp1->index = 15
 tmp1->timeStamp = nil
 tmp1->graphType = nil
 tmp1->yaxisLabel = nil
@@ -997,7 +881,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_lgv"
+tmp1->signal = "/A2S/CTRL/soV"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1033,7 +917,7 @@ tmp1->value = nil
 tmp1->plot = 't
 tmp1->save = 't
 tmp1->march = nil
-tmp1->index = 18
+tmp1->index = 16
 tmp1->timeStamp = nil
 tmp1->graphType = nil
 tmp1->yaxisLabel = nil
@@ -1055,7 +939,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/DTU<0>/_rv"
+tmp1->signal = "/A2S/CTRL/ackV"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1091,6 +975,122 @@ tmp1->value = nil
 tmp1->plot = 't
 tmp1->save = 't
 tmp1->march = nil
+tmp1->index = 17
+tmp1->timeStamp = nil
+tmp1->graphType = nil
+tmp1->yaxisLabel = nil
+tmp1->label = nil
+tmp1->yaxisUnit = nil
+tmp1->waveSpec = nil
+list(tmp1)
+)
+_outputList = nconc( _outputList savedComponent) 
+savedComponent = nil 
+savedComponent = (let
+(tmp1)
+(unless tmp1
+tmp1 = make_sevOutputStruct()
+)
+(unless tmp1
+tmp1 = (ncons nil)
+)
+tmp1->inLastSet = nil
+tmp1->name = nil
+tmp1->expression = nil
+tmp1->signal = "/A2S/CTRL/ACK_CTRL/_ack1"
+tmp1->scriptFile = nil
+tmp1->type2 = nil
+tmp1->evalType = nil
+tmp1->displayIt = nil
+tmp1->internalName = nil
+tmp1->masterName = nil
+tmp1->masterScriptFile = nil
+tmp1->saveScriptFile = nil
+tmp1->saveMasterScriptFile = nil
+tmp1->isReferenced = nil
+tmp1->lastEvalTime = nil
+tmp1->origin = nil
+tmp1->sweepSet = nil
+tmp1->depList = nil
+tmp1->type = 'net
+tmp1->areaTable = nil
+tmp1->selectionDetail = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = 'color
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = "y7"
+tmp2 = "drawing"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+list(tmp1)
+)
+tmp1->value = nil
+tmp1->plot = 't
+tmp1->save = 't
+tmp1->march = nil
+tmp1->index = 18
+tmp1->timeStamp = nil
+tmp1->graphType = nil
+tmp1->yaxisLabel = nil
+tmp1->label = nil
+tmp1->yaxisUnit = nil
+tmp1->waveSpec = nil
+list(tmp1)
+)
+_outputList = nconc( _outputList savedComponent) 
+savedComponent = nil 
+savedComponent = (let
+(tmp1)
+(unless tmp1
+tmp1 = make_sevOutputStruct()
+)
+(unless tmp1
+tmp1 = (ncons nil)
+)
+tmp1->inLastSet = nil
+tmp1->name = nil
+tmp1->expression = nil
+tmp1->signal = "/A2S/CTRL/ACK_CTRL/_ace"
+tmp1->scriptFile = nil
+tmp1->type2 = nil
+tmp1->evalType = nil
+tmp1->displayIt = nil
+tmp1->internalName = nil
+tmp1->masterName = nil
+tmp1->masterScriptFile = nil
+tmp1->saveScriptFile = nil
+tmp1->saveMasterScriptFile = nil
+tmp1->isReferenced = nil
+tmp1->lastEvalTime = nil
+tmp1->origin = nil
+tmp1->sweepSet = nil
+tmp1->depList = nil
+tmp1->type = 'net
+tmp1->areaTable = nil
+tmp1->selectionDetail = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = 'color
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = "y8"
+tmp2 = "drawing"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+list(tmp1)
+)
+tmp1->value = nil
+tmp1->plot = 't
+tmp1->save = 't
+tmp1->march = nil
 tmp1->index = 19
 tmp1->timeStamp = nil
 tmp1->graphType = nil
@@ -1113,7 +1113,65 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/acd"
+tmp1->signal = "/A2S/CTRL/ACK_CTRL/_ack0"
+tmp1->scriptFile = nil
+tmp1->type2 = nil
+tmp1->evalType = nil
+tmp1->displayIt = nil
+tmp1->internalName = nil
+tmp1->masterName = nil
+tmp1->masterScriptFile = nil
+tmp1->saveScriptFile = nil
+tmp1->saveMasterScriptFile = nil
+tmp1->isReferenced = nil
+tmp1->lastEvalTime = nil
+tmp1->origin = nil
+tmp1->sweepSet = nil
+tmp1->depList = nil
+tmp1->type = 'net
+tmp1->areaTable = nil
+tmp1->selectionDetail = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = 'color
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = "y7"
+tmp2 = "drawing"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+list(tmp1)
+)
+tmp1->value = nil
+tmp1->plot = 't
+tmp1->save = 't
+tmp1->march = nil
+tmp1->index = 20
+tmp1->timeStamp = nil
+tmp1->graphType = nil
+tmp1->yaxisLabel = nil
+tmp1->label = nil
+tmp1->yaxisUnit = nil
+tmp1->waveSpec = nil
+list(tmp1)
+)
+_outputList = nconc( _outputList savedComponent) 
+savedComponent = nil 
+savedComponent = (let
+(tmp1)
+(unless tmp1
+tmp1 = make_sevOutputStruct()
+)
+(unless tmp1
+tmp1 = (ncons nil)
+)
+tmp1->inLastSet = nil
+tmp1->name = nil
+tmp1->expression = nil
+tmp1->signal = "/A2S/CTRL/sio<1:0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1149,64 +1207,6 @@ tmp1->value = nil
 tmp1->plot = 't
 tmp1->save = 't
 tmp1->march = nil
-tmp1->index = 20
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/ace"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y2"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
 tmp1->index = 21
 tmp1->timeStamp = nil
 tmp1->graphType = nil
@@ -1229,7 +1229,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/dtu_in<0,3:1>"
+tmp1->signal = "/A2S/CTRL/ag<1:0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1287,7 +1287,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/dtu_en<0,1>"
+tmp1->signal = "/A2S/CTRL/ArbLogic/_ag<1>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1345,7 +1345,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/en"
+tmp1->signal = "/A2S/CTRL/ArbLogic/_ag<0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1403,7 +1403,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/_siV"
+tmp1->signal = "/A2S/CTRL/IntComp/_v"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1461,7 +1461,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/si0"
+tmp1->signal = "/A2S/CTRL/IntComp/en"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1519,7 +1519,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/si1"
+tmp1->signal = "/A2S/CTRL/so<0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1577,7 +1577,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/_kc"
+tmp1->signal = "/A2S/CTRL/so<1>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1635,7 +1635,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/ag1"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/_so<1>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1693,7 +1693,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/ag0"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/_so<0>"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1751,7 +1751,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/soV"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/xso"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1809,7 +1809,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/_si0"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/_xso"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1867,7 +1867,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/_si1"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/_Sout"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1925,7 +1925,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/sv"
+tmp1->signal = "/A2S/CTRL/So_OutputLatch/sen"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -1983,7 +1983,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/s"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/_x"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2041,7 +2041,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/_CLK"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/x"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2099,7 +2099,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/x"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/s"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2157,7 +2157,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/Si_InputLatch/_x"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/_si0"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2215,7 +2215,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/ArbLogic/net32"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/_si1"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2273,7 +2273,7 @@ tmp1 = (ncons nil)
 tmp1->inLastSet = nil
 tmp1->name = nil
 tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/ArbLogic/net33"
+tmp1->signal = "/A2S/CTRL/Si_InputLatch/siV"
 tmp1->scriptFile = nil
 tmp1->type2 = nil
 tmp1->evalType = nil
@@ -2310,644 +2310,6 @@ tmp1->plot = 't
 tmp1->save = 't
 tmp1->march = nil
 tmp1->index = 40
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/IntComp/_en"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y2"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 41
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/IntComp/_v"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y3"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 42
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_So0"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y4"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 43
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_So1"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y5"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 44
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/net18"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y6"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 45
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/So0"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y7"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 46
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_xso"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y8"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 47
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/xso"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y9"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 48
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_CLK"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y1"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 49
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_nxsobar"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y2"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 50
-tmp1->timeStamp = nil
-tmp1->graphType = nil
-tmp1->yaxisLabel = nil
-tmp1->label = nil
-tmp1->yaxisUnit = nil
-tmp1->waveSpec = nil
-list(tmp1)
-)
-_outputList = nconc( _outputList savedComponent) 
-savedComponent = nil 
-savedComponent = (let
-(tmp1)
-(unless tmp1
-tmp1 = make_sevOutputStruct()
-)
-(unless tmp1
-tmp1 = (ncons nil)
-)
-tmp1->inLastSet = nil
-tmp1->name = nil
-tmp1->expression = nil
-tmp1->signal = "/S2A/CTRL/So_OutputLatch/_So"
-tmp1->scriptFile = nil
-tmp1->type2 = nil
-tmp1->evalType = nil
-tmp1->displayIt = nil
-tmp1->internalName = nil
-tmp1->masterName = nil
-tmp1->masterScriptFile = nil
-tmp1->saveScriptFile = nil
-tmp1->saveMasterScriptFile = nil
-tmp1->isReferenced = nil
-tmp1->lastEvalTime = nil
-tmp1->origin = nil
-tmp1->sweepSet = nil
-tmp1->depList = nil
-tmp1->type = 'net
-tmp1->areaTable = nil
-tmp1->selectionDetail = (let
-(tmp1)
-tmp1 = (let
-(tmp1 tmp2)
-tmp1 = 'color
-tmp2 = (let
-(tmp1 tmp2)
-tmp1 = "y3"
-tmp2 = "drawing"
-list(tmp1 tmp2)
-)
-list(tmp1 tmp2)
-)
-list(tmp1)
-)
-tmp1->value = nil
-tmp1->plot = 't
-tmp1->save = 't
-tmp1->march = nil
-tmp1->index = 51
 tmp1->timeStamp = nil
 tmp1->graphType = nil
 tmp1->yaxisLabel = nil

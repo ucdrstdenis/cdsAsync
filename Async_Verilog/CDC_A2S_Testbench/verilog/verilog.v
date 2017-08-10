@@ -1,9 +1,9 @@
 module CDC_A2S_Testbench (Tx, Txe, Din, Si, So, CLK, RESET, VDD, GND);
  // Transfer 1 word / 4 cycles
 
-inout VDD, GND;
-output  RESET;
-output  CLK;
+inout  VDD, GND;
+output RESET;
+output CLK;
 output [127:0] Tx;
 input  [31:0] Txe;
 input  [63:0] Din;
@@ -24,8 +24,6 @@ localparam DW=64;     // Data Bus Width [Binary]
 reg RESET;
 reg [DW-1:0] TxReg;
 reg [DW-1:0] RxReg;
-wire [DW-1:0] dataRx;
-wire [(DW/2)-1:0] readDataValid;
 reg goReg;
 reg CLK;
 reg So;
@@ -37,7 +35,7 @@ integer i;
 ////////////////////////////////////////////////
 // Sub-modules
 ////////////////////////////////////////////////
-Bin2QDI_1of4      TxEncoder [(DW/2)-1:0]  (Tx, TxReg,  goReg,  Txe, RESET, VDD, GND); 
+Bin2QDI_1of4  TxEncoder [(DW/2)-1:0]  (Tx, TxReg,  goReg,  Txe, RESET, VDD, GND); 
 
 ////////////////////////////////////////////////
 // Task Definitions
@@ -46,11 +44,11 @@ Bin2QDI_1of4      TxEncoder [(DW/2)-1:0]  (Tx, TxReg,  goReg,  Txe, RESET, VDD, 
 task SendTokens;   
     input [(DW-1):0] data;   
     begin
-        wait(&Txe);
+        wait(&Txe);  // Todo: Redo everything using VerilogCSP
         TxReg <= data;
         goReg <= 1'b1;
         TxTokenCount = TxTokenCount + 1;
-        $display(" %M: %t ps - Sent token w/ data = %b.", $time, TxReg);
+        $display(" %M: %t ps - Sent token w/ data = 0x%h.", $time, TxReg);
 		@(negedge goReg);
     end
 endtask
@@ -61,12 +59,11 @@ task Init;
         goReg  <= 1'b0;
         TxReg  <= {DW{1'b0}};
         RxReg  <= {DW{1'b0}};
-
         #1; // Allow initial and final conditions to be interchangable
-        $display("%M: %t ps - Asserting Reset...", $time); 
+        $display("%M: Asserting Reset @ time %t ps", $time); 
         RESET <= 1'b0;
     	#RST_HOLD;
-        $display("%M: %t ps - De-Asserting Reset...", $time); 
+        $display("%M: De-Asserting Reset @ time %t ps", $time); 
     	RESET <= 1'b1;
     	#RST_HOLD;  
         TxTokenCount = 0;
@@ -102,7 +99,7 @@ initial begin
     So     <= 1'b0;
     SiReg  <= 1'b0;
     forever begin
-        #CLK_PERIOD CLK = !CLK;
+        #(CLK_PERIOD/2) CLK = !CLK;
     end
 end
 

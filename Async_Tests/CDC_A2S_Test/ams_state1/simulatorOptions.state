@@ -459,7 +459,7 @@
 (opts homotopy) ""
 (opts iabstol) "1e-12"
 (opts iccapcheck) ""
-(opts icpriority) ""
+(opts icpriority) "file"
 (opts ignshorts) ""
 (opts info) ""
 (opts inventory) ""
