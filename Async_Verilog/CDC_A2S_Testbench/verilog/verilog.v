@@ -27,7 +27,6 @@ reg [DW-1:0] RxReg;
 reg goReg;
 reg CLK;
 reg So;
-reg SiReg;
 
 integer TxTokenCount;
 integer RxTokenCount;
@@ -97,22 +96,19 @@ end
 initial begin
     CLK    <= 1'b0;
     So     <= 1'b0;
-    SiReg  <= 1'b0;
     forever begin
         #(CLK_PERIOD/2) CLK = !CLK;
     end
 end
 
 always @(posedge CLK) begin
-    SiReg <= Si;
-    if (SiReg == 1'b1 && So == 1'b0) begin
+    if (Si == 1'b1 && So == 1'b0) begin
         @(negedge CLK) So <= 1'b1;
-    end else if (SiReg == 1'b1 && So == 1'b1) begin
+    end else if (Si == 1'b1 && So == 1'b1) begin
         RxReg <= Din;
         RxTokenCount = RxTokenCount + 1;
-    end else if (SiReg == 1'b0 && So == 1'b1) begin
-        @(negedge CLK) So <= 1'b0;
+    end else if (Si == 1'b0 && So == 1'b1) begin
+       @(negedge CLK) So <= 1'b0;
     end
 end
-
 endmodule
