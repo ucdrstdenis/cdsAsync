@@ -1,7 +1,8 @@
 ## Cadence
-*/CDC_S2A_*
 *.cadence
 .cadence
+*.pcdb
+.pcdb
 *.v.bak
 *.png
 *.cdslck
@@ -16,11 +17,6 @@ inca.*
 *.jpg
 *.-
 *.cfg%
-
-## Cells not for commit
-*/CDC_S2A_*
-*/About_Contributors
-*/SRAM_TEST_BANK_Testbench
 
 ## C++
 # Prerequisites
