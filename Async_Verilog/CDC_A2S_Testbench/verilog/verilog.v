@@ -106,6 +106,7 @@ always @(posedge CLK) begin
         @(negedge CLK) So <= 1'b1;
     end else if (Si == 1'b1 && So == 1'b1) begin
         RxReg <= Din;
+        $display("%M: Rx'd data 0x%h @ time %t ps", Din, $time);
         RxTokenCount = RxTokenCount + 1;
     end else if (Si == 1'b0 && So == 1'b1) begin
        @(negedge CLK) So <= 1'b0;

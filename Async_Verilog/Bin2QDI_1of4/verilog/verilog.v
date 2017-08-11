@@ -84,7 +84,6 @@ always @(negedge req) begin
     state = idle;
 end
 
-
 always @(posedge Re) begin
     state = idle;
 end
