@@ -1,3 +1,3 @@
-projectDir = '"/net/mc/free/rstdenis/simulation"
+projectDir = '"/tmp/simulation"
 designInfo = '("Async_Tests" "Register_Test" "config" "ams")
 descriptionText = "None"

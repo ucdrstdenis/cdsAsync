@@ -4,6 +4,9 @@
 * boxes and simulation "re-save required" error messages.               *
 *************************************************************************/
 
+
+/* Requires CCScheckAllSch.il    */
+/* Download from Cadence Support */
 load("Skill/CCScheckAllSch.il")
 
 printf("Saving Async Lib...\n")
