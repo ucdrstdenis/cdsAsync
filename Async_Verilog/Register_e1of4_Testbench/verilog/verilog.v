@@ -90,10 +90,12 @@ initial begin
 
    // for (i = 0; i < (NO_TOKENS/4); i = i + 1) begin
         SendTokens(2'b11, 2'b01);  // write data
-        SendTokens(2'b10, 2'b01);  // write data    
-        SendTokens(2'b00, 2'b01);  // write data  
+        SendTokens(2'b00, 2'b00);  // read data
+        SendTokens(2'b10, 2'b01);  // write data
+        SendTokens(2'b00, 2'b00);  // read data    
+        SendTokens(2'b00, 2'b01);  // write data
+        SendTokens(2'b00, 2'b00);  // read data  
         SendTokens(2'b01, 2'b01);  // write data    
-  
         SendTokens(2'b00, 2'b00);  // read data
         SendTokens(2'b01, 2'b10);  // write + read data
         SendTokens(2'b00, 2'b00);  // read data
