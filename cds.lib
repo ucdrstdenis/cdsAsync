@@ -1,0 +1,21 @@
+#-----------------------
+# Cadence Libraries:
+#-----------------------
+SOFTINCLUDE $(inst_root_with:tools/dfII/bin/virtuoso)/share/cdssetup/cds.lib
+SOFTINCLUDE $(inst_root_with:tools/bin/ncsim)/tools/affirma_ams/etc/connect_lib/cds.lib
+DEFINE sample $(inst_root_with:tools/dfII/bin/virtuoso)/tools/dfII/samples/cdslib/sample
+
+#-----------------------
+# Async Libraries: 
+#-----------------------
+DEFINE Async                  ./Async
+DEFINE Async_FIFOs            ./Async_FIFOs
+DEFINE Async_Tests            ./Async_Tests
+DEFINE Async_Verilog          ./Async_Verilog
+DEFINE Async_Verilog_Wrappers ./Async_Verilog_Wrappers
+
+#-----------------------
+# Modified TechLibrary:
+#-----------------------
+DEFINE asap7_TechLib ./TechLib
+
