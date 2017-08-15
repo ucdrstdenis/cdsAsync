@@ -44,7 +44,7 @@ task SendTokens;
     input [(DW-1):0] data;   
     begin
         wait(&Txe);  // Todo: Redo everything using VerilogCSP
-        TxReg <= data;
+        TxReg <= $random();
         goReg <= 1'b1;
         TxTokenCount = TxTokenCount + 1;
         $display(" %M: %t ps - Sent token w/ data = 0x%h.", $time, TxReg);
@@ -96,6 +96,8 @@ end
 initial begin
     CLK    <= 1'b0;
     So     <= 1'b0;
+    #RST_HOLD;
+    #RST_HOLD;
     forever begin
         #(CLK_PERIOD/2) CLK = !CLK;
     end
