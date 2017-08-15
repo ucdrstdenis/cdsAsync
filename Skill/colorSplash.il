@@ -30,8 +30,12 @@ CCSsetWireColorAndStyle(net ?color color ?style style)
 t
 ))
 
-CCSsetWireColorAndStyle("VDD" ?color "magenta")
-CCSsetWireColorAndStyle("GND" ?color "violet")
-CCSsetWireColorAndStyle("RST" ?color "cyan")
-CCSsetWireColorAndStyle("_RST" ?color "lime")
+CCSsetWireColorAndStyle("VDD"   ?color "magenta")
+CCSsetWireColorAndStyle("VDDT!" ?color "magenta")
+CCSsetWireColorAndStyle("vdd!"  ?color "magenta")
+CCSsetWireColorAndStyle("GND"   ?color "violet")
+CCSsetWireColorAndStyle("gnd!"  ?color "violet")
+CCSsetWireColorAndStyle("RST"   ?color "cyan")
+CCSsetWireColorAndStyle("_RST"  ?color "lime")
+
 

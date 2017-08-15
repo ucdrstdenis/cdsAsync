@@ -1,12 +1,10 @@
-/*************************************************************************
+/************************************************************************
 * RSD - Use this to re-save the schematic libraries when a change is    *
 * made that propagates throughout all cells; avoids blinking-yellow     *
-* boxes and simulation "re-save required" error messages.               *
+* boxes and simulation "schematic unbound. Do check + save"  error      *
+* messages.                                                             *
 *************************************************************************/
 
-
-/* Requires CCScheckAllSch.il    */
-/* Download from Cadence Support */
 load("Skill/CCScheckAllSch.il")
 
 printf("Saving Async Lib...\n")

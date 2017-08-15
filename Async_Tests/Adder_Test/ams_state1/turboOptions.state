@@ -20,7 +20,7 @@
 (amsTurboOpts psrSwitch) nil
 (amsTurboOpts psrXpsmsOption) "Default"
 (amsTurboOpts rcrNetFmax) nil
-(amsTurboOpts uniMode) "Spectre"
+(amsTurboOpts uniMode) "APS"
 (amsTurboOpts virtualGroundNodes) nil
 (amsTurboOpts virtualPowerNodeListBox) (nil choices nil value nil)
 (amsTurboOpts virtualPowerNodeValue) nil

@@ -1,5 +1,5 @@
 savedComponent = (let
-(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7)
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6)
 (unless tmp1
 tmp1 = make_sevVariableStruct()
 )
@@ -42,8 +42,8 @@ tmp5 = make_sevVariableStruct()
 (unless tmp5
 tmp5 = (ncons nil)
 )
-tmp5->name = "N_TOKENS"
-tmp5->expression = "8"
+tmp5->name = "RESET_HOLD"
+tmp5->expression = "10k"
 tmp5->index = 5
 (unless tmp6
 tmp6 = make_sevVariableStruct()
@@ -51,17 +51,8 @@ tmp6 = make_sevVariableStruct()
 (unless tmp6
 tmp6 = (ncons nil)
 )
-tmp6->name = "RESET_HOLD"
-tmp6->expression = "10k"
+tmp6->name = "vdd"
+tmp6->expression = "0.750"
 tmp6->index = 6
-(unless tmp7
-tmp7 = make_sevVariableStruct()
-)
-(unless tmp7
-tmp7 = (ncons nil)
-)
-tmp7->name = "vdd"
-tmp7->expression = "0.750"
-tmp7->index = 7
-list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7)
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6)
 )
