@@ -1,6 +1,6 @@
 /*************************************************************************
-* RSD - Use this to set cell wire colors. Can be placed in a loop to add *
-* to entire library. To use, open a cell view, and in the CIW            *
+* RSD - Use this to set wire colors. Can be placed in a loop to add      *
+* color to an entire library. To use, open a cell view, and in the CIW   *
 * run load("colorSplash.il")                                             *
 *                                                                        *
 * Original source: CCSsetWireColorAndStyle.il                            *

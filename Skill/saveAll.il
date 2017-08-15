@@ -3,7 +3,7 @@
 * made that propagates throughout all cells; avoids blinking-yellow     *
 * boxes and simulation "schematic unbound. Do check + save"  error      *
 * messages.                                                             *
-*************************************************************************/
+*********************************************************************** */
 
 load("Skill/CCScheckAllSch.il")
 
