@@ -1,8 +1,8 @@
 /* *****************************************************************
- * RSD - Modified CCScheckAllSch.il: Version provided by Cadence   *
- * does not work. Added in necessary fix. This script is used by   *
- * saveAll.il                                                      *
- * ************************************************************** */
+ * RSD - Modified CCScheckAllSch.il: Original version provided by  *
+ * Cadence does not save correctly - added in necessary fix. This  *
+ * script is called by saveAll.il                                  *
+ * *************************************************************** */
 
 /* CCScheckAllSch.il
 
