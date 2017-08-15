@@ -1,0 +1,27 @@
+(amsTurboOpts analogInstValue) nil
+(amsTurboOpts analogSubcktValue) nil
+(amsTurboOpts apsplus) nil
+(amsTurboOpts cktpreset) "None"
+(amsTurboOpts dcOPSolver) "APS"
+(amsTurboOpts digitalInstValue) nil
+(amsTurboOpts digitalSubcktValue) nil
+(amsTurboOpts digitalspeed) "2"
+(amsTurboOpts disableVddOverride) nil
+(amsTurboOpts errorLevel) "Do not override"
+(amsTurboOpts mtOption) "Auto"
+(amsTurboOpts numThreads) "1"
+(amsTurboOpts optvdd) 3.3
+(amsTurboOpts preserveInst) nil
+(amsTurboOpts preserveOption) "None"
+(amsTurboOpts proc_affinity) ""
+(amsTurboOpts psrFmax) ""
+(amsTurboOpts psrFmaxRCR) ""
+(amsTurboOpts psrOption) "Default"
+(amsTurboOpts psrSwitch) nil
+(amsTurboOpts psrXpsmsOption) "Default"
+(amsTurboOpts rcrNetFmax) nil
+(amsTurboOpts uniMode) "Spectre"
+(amsTurboOpts virtualGroundNodes) nil
+(amsTurboOpts virtualPowerNodeListBox) (nil choices nil value nil)
+(amsTurboOpts virtualPowerNodeValue) nil
+(amsTurboOpts virtualPowerNodes) nil

@@ -1,0 +1,13 @@
+--pcdbVlog file, Rev:1.0
+
+#CELL
+* QDI2Bin_1of2 *
+SumDecoder
+CoDecoder
+
+#CELL
+* Bin2QDI_1of2 *
+AxEncoder
+CxEncoder
+BxEncoder
+
