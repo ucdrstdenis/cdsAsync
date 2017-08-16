@@ -7,7 +7,7 @@ tmp1 = make_sevVariableStruct()
 tmp1 = (ncons nil)
 )
 tmp1->name = "CLK_PERIOD"
-tmp1->expression = "1000"
+tmp1->expression = "2000"
 tmp1->index = 1
 (unless tmp2
 tmp2 = make_sevVariableStruct()
@@ -106,7 +106,7 @@ tmp12 = make_sevVariableStruct()
 tmp12 = (ncons nil)
 )
 tmp12->name = "vdd"
-tmp12->expression = "0.500"
+tmp12->expression = "0.750"
 tmp12->index = 12
 list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12)
 )

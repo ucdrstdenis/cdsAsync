@@ -1,6 +1,6 @@
 (amsTurboOpts analogInstValue) nil
 (amsTurboOpts analogSubcktValue) nil
-(amsTurboOpts apsplus) nil
+(amsTurboOpts apsplus) t
 (amsTurboOpts cktpreset) "None"
 (amsTurboOpts dcOPSolver) "APS"
 (amsTurboOpts digitalInstValue) nil

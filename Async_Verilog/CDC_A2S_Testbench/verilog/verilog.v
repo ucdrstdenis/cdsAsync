@@ -47,6 +47,7 @@ task SendTokens;
         TxReg <= $random();
         goReg <= 1'b1;
         TxTokenCount = TxTokenCount + 1;
+        #1;
         $display(" %M: %t ps - Sent token w/ data = 0x%h.", $time, TxReg);
 		@(negedge goReg);
     end
