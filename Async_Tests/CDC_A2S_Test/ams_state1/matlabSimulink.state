@@ -1,8 +1,8 @@
-whenStartMatlab "no"
-simInitTimeOut 10
-matlabStartDir "/net/bull/free/Cadence/matlab"
-couplerFilePath ""
 autoCreatePcellFile t
+couplerFilePath ""
+simInitTimeOut 10
 matlabStartCmd "matlab"
+matlabStartDir "/net/bull/free/Cadence/matlab"
+whenStartMatlab "no"
 matlabDesignName ""
 couplerInst ""
