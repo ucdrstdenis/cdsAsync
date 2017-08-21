@@ -58,7 +58,11 @@ task SendTokens;
        
         goReg <= 1'b1;
         TxTokenCount = TxTokenCount + 1;
-        $display(" %M: Tx token data = 0x%h @ time %t ps", TxReg, $time);
+        case (ctrl)
+            2'b00: $display(" %M: Tx READ @ time              %t ps", $time);
+            2'b01: $display(" %M: Tx WRITE 0x%h @ time        %t ps", data, $time);
+            2'b10: $display(" %M: Tx READ + WRITE 0x%h @ time %t ps", data, $time);
+        endcase
 		@(negedge goReg);
     end
 endtask
@@ -71,10 +75,10 @@ task Init;
         CxReg  <= {CW{1'b0}};
         RxReg  <= {DW{1'b0}};
         #1; // Allow initial and final conditions to be interchangable
-        $display("%M: Asserting Reset @ time %t ps", $time); 
+        $display("%M: Asserting Reset @ time       %t ps", $time); 
         RESET <= 1'b0;
     	#RST_HOLD;
-        $display("%M: De-Asserting Reset @ time %t ps", $time); 
+        $display("%M: De-Asserting Reset @ time    %t ps", $time); 
     	RESET <= 1'b1;
     	#RST_HOLD;  
         TxTokenCount = 0;
@@ -88,20 +92,9 @@ endtask
 initial begin
     Init;
 
-   // for (i = 0; i < (NO_TOKENS/4); i = i + 1) begin
-        SendTokens(2'b00, 2'b01);  // write data
-        SendTokens(2'b00, 2'b00);  // read data
-        SendTokens(2'b01, 2'b01);  // write data
-        SendTokens(2'b00, 2'b00);  // read data    
-        SendTokens(2'b10, 2'b01);  // write data
-        SendTokens(2'b00, 2'b00);  // read data  
-        SendTokens(2'b11, 2'b01);  // write data    
-        SendTokens(2'b00, 2'b00);  // read data
-        SendTokens(2'b01, 2'b10);  // write + read data
-        SendTokens(2'b00, 2'b00);  // read data
-   // end
-    
-   // wait(RxTokenCount==TxTokenCount);
+   for (i = 0; i < NO_TOKENS; i = i + 1) begin
+        SendTokens($urandom(), $urandom()%3);
+   end
 
     if (FINISH) begin
         #RST_HOLD;
@@ -119,7 +112,7 @@ end
 always @(posedge validRx) begin
     RxReg <= dataRx;
     RxTokenCount = RxTokenCount + 1;
-    $display(" %M: Rx token %d w/ data = 0x%h @ time %t ps", RxTokenCount, dataRx, $time);
+    $display(" %M: Rx data 0x%h @ time         %t ps", dataRx, $time);
 end
 
 endmodule

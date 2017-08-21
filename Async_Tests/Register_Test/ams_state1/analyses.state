@@ -18,7 +18,7 @@ analysis(tran fields paramValue) ""
 analysis(tran fields param_file) ""
 analysis(tran fields param_vec) nil
 analysis(tran fields psdmaxfreq) ""
-analysis(tran fields stop) "50n"
+analysis(tran fields stop) "1u"
 analysis(tran fields tranNoise) ""
 analysis(tran options acnames) nil
 analysis(tran options actimes) nil
@@ -48,7 +48,7 @@ analysis(tran options method) ""
 analysis(tran options minstep) ""
 analysis(tran options oscfreq) ""
 analysis(tran options outputstart) ""
-analysis(tran options readic) "./Sim/Register_Test.ic"
+analysis(tran options readic) "./Sim/Register_500mV_25C.fc"
 analysis(tran options readns) ""
 analysis(tran options relref) ""
 analysis(tran options skipcount) ""

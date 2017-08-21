@@ -18,7 +18,7 @@ analysis(tran fields paramValue) ""
 analysis(tran fields param_file) ""
 analysis(tran fields param_vec) nil
 analysis(tran fields psdmaxfreq) ""
-analysis(tran fields stop) "100n"
+analysis(tran fields stop) "200n"
 analysis(tran fields tranNoise) ""
 analysis(tran options acnames) nil
 analysis(tran options actimes) nil

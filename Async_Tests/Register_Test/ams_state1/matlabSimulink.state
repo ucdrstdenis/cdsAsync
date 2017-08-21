@@ -1,6 +1,6 @@
 couplerFilePath ""
-autoCreatePcellFile t
 couplerInst ""
+autoCreatePcellFile t
 matlabDesignName ""
 matlabStartCmd "matlab"
 whenStartMatlab "no"
