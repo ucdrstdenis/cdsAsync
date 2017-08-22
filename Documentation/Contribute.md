@@ -1,5 +1,5 @@
 # Contribute
-All contributions are welcome. Simply email the author of the repository.
+All contributions are welcomed for consideration. Simply contact a contributor.
 
 ## Wishlist + In-progress  
 - Slack-matcher + interface to MILP Solver (GUROBI, Cplex, contributor's-choice, etc).  
