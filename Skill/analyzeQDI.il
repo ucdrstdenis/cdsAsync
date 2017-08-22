@@ -4,6 +4,8 @@
 *  Description: An assortment of procedures for analyzing         *
 *               transient simulation data of QDI circuits. See    *
 *               the usage example at the end of this file.        *
+*               For additional example usage, see                 *
+*               analyze_template.ocn in the Ocean/ folder         *
 ***************************************************************** */
 
 /* ****************************************************************
