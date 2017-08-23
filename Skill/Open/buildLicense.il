@@ -1,7 +1,12 @@
 /*************************************************************************
-* RSD - Given a top level schematic, recursively descend the hierarchy   *
-*       to output a list of citations, and licenses to purchase prior    *
+* RSD - Given a top level design, recursively descend the hierarchy to   *
+*       output a list of citations and licenses for purchase prior       *
 *       to commercial fabrication.                                       *
 *************************************************************************/
 
-/* Open for contribution */
+procedure( buildLicense(myLib topCell) 
+  /* Open for contribution */
+)
+
+// See countFets() procedure in analyzeQDI.il for recursive hierarchy
+// traversal example
