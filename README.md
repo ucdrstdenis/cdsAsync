@@ -20,9 +20,10 @@ It is currently in development at [UC Davis](http://www.ece.ucdavis.edu/), and d
 6.  [Techniques for Facilitating Conversion Between Asynchronous and Synchronous Domains](https://www.google.com/patents/US6961863)
 7.  [An Asynchronous Pipelined Lattice Structure Filter](http://ieeexplore.ieee.org/document/656301/)
 8.  [Pipelined Asynchronous Cache Design](http://authors.library.caltech.edu/26919/3/tr_thesis.pdf)
-9.  [An Energy Estimation Method for Asynchronous Circuits with Application to an Asynchronous Microprocessor](http://ieeexplore.ieee.org/document/999207/)
-10. [Resetting Asynchronous QDI Systems](http://thesis.library.caltech.edu/7968/1/thesis.pdf)
-11. [Resililent Design Methodology for Energy-Efficient SRAM](https://pdfs.semanticscholar.org/f47a/1d50447301f56ee9ffc17fe7ec7c67e33357.pdf?_ga=2.140428275.1186140395.1499304491-1962221572.1498409188)
+9.  [Asynchronous Techniques for System-on-Chip Design](http://www.async.caltech.edu/Pubs/PDF/2006_ieee_soc.pdf)
+10.  [An Energy Estimation Method for Asynchronous Circuits with Application to an Asynchronous Microprocessor](http://ieeexplore.ieee.org/document/999207/)
+11. [Resetting Asynchronous QDI Systems](http://thesis.library.caltech.edu/7968/1/thesis.pdf)
+12. [Resililent Design Methodology for Energy-Efficient SRAM](https://pdfs.semanticscholar.org/f47a/1d50447301f56ee9ffc17fe7ec7c67e33357.pdf?_ga=2.140428275.1186140395.1499304491-1962221572.1498409188)
  * Additional citations to be added ...
 
 ### Upcoming Citations
