@@ -17,21 +17,27 @@
 inca.*
 *.cdsvmod
 *.jpg
-*.-
+*.oa-
 *.cfg%
 
 ###############
 # C++
 ###############
-# Prerequisites
 *.d
+*.x
+.gdb*
+#*.html
 
-# Compiled Object files
-*.slo
-*.lo
+# Eclipse files
+ *.cproject
+ *.project
+ *.settings
+ 
+# Object files
+*.elf
 *.o
+*.ko
 *.obj
-
 
 # Executables
 *.exe
