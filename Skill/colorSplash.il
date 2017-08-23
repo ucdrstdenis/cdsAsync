@@ -1,7 +1,7 @@
 /*************************************************************************
-* RSD - Used to quickly set default wire colors. Can be placed in a loop *
-* to add color to an entire library. To use, open a schematic view, and  * 
-* press F9. Or type colorSplash() in the CIW                             *
+* RSD - Used to set default wire colors. To use, open a schematic view,  * 
+* click Check & Save icon, then press F9, or type colorSplash() in the   *
+* CIW. Can also be placed in a loop to add color to an entire library.   *
 *                                                                        *
 * Original source: CCSsetWireColorAndStyle.il                            *
 *************************************************************************/
