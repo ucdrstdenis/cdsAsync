@@ -1,5 +1,5 @@
 # cdsAsync
-[![homebrew](https://img.shields.io/badge/homebrew-v0.95.0-brightgreen.svg?style=plastic)](README.md)
+[![homebrew](https://img.shields.io/badge/homebrew-v0.96.0-brightgreen.svg?style=plastic)](README.md)
 [![License](https://img.shields.io/badge/license-BSD-blue.svg?style=plastic)](LICENSE)
 
 cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites.
