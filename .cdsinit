@@ -15,9 +15,8 @@ User = getShellEnvVar("USER")
 editor = "gedit";
 
 ; Set the Undo Limit
-hiSetUndoLimit(20)
+hiSetUndoLimit(30)
 
-;; Uncomment line below for distributed sim
 envLoadFile("./.cdsenv")
 asiSetEnvOptionVal( asiGetTool('ams) 'modelFiles '(("./Models/7nmLib.scs" "TT")) )
 
