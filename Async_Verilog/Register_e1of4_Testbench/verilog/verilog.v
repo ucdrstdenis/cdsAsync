@@ -92,9 +92,14 @@ endtask
 initial begin
     Init;
 
-   for (i = 0; i < NO_TOKENS; i = i + 1) begin
-        SendTokens($urandom(), $urandom()%3);
-   end
+   //for (i = 0; i < NO_TOKENS; i = i + 1) begin
+        //SendTokens($urandom(), $urandom()%3);
+        SendTokens(2'b00, 2'b00);  // Read
+        SendTokens(2'b11, 2'b01);  // Write  
+        SendTokens(2'b00, 2'b00);  // Read
+        SendTokens(2'b00, 2'b01);  // Write
+        SendTokens(2'b00, 2'b00);  // Read
+  // end
 
     if (FINISH) begin
         #RST_HOLD;
