@@ -7,12 +7,12 @@ The winning submission will be awarded Citation No. **00** and propagated throug
 - Citation **000** cdsAsync  
 
 ## Entry Part 1
-Complete the [License Builder Skill Script](../Skill/Open/buildLicense.il) and make the necessary "logical" alterations to the library. In other words, extracting and parsing a note made in each drawing is highly suboptimal. Please use an alternate method of citation and extraction. Be creative & logical.  
+Complete the [License Builder Skill Script](../Skill/Open/buildLicense.il).
 
 ## Main Entry
-While the tool developed will be highly useful, it serves as an entry point for an idea, as the script is somewhat straightforward given a basic understanding of SKILL and the IC toolsuite.  
+While the tool developed will be highly useful, it serves as an entry point for a larger idea, as the script is somewhat straightforward given a basic understanding of SKILL and the IC toolsuite.  
 
-The following contains a series of fictional scenarios used to illustrate an idea and bring a series of questions to light.  
+The following contains a series of fictional scenarios used to illustrate an idea and to bring a series of questions to light.  
 **Upcoming...**   
 
 ## Your Proposal

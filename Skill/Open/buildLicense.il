@@ -4,13 +4,18 @@
 *       to commercial fabrication. Bonus points are awarded for invoice  *
 *       generation.                                                      *
 *                                                                        *
-*       © 2017 R.V. St. Denis. All Rights Reserved.                      *
+*       © 2017 Your Name & Organization. All Rights Reserved.            *
 *************************************************************************/
 
 procedure( buildLicense(myLib topCell anyAdditionalArgs ) 
 
   /*             Open for contribution.               */
-  /* Please see PGSPI.md in the Documentation folder. */
+  /*     See PGSPRG.md in the Documentation folder.   */
+
+  /* Please do not just extract and parse the note in */
+  /* each schematic. Make the necessary "logical"     */
+  /* changes to the library & develop a better method */
+  /* of citation. Be creative first, logical second.  */
 
 )
 
