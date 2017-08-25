@@ -1,6 +1,5 @@
 ## An N Point Proposal for  
 ## Perpetual Globally Sourced Passive Revenue Generation
-#####  Concept © 2017 R.V. St. Denis. All Rights Reserved.
 
 ### PGSPRG submission contest
 The winning submission will be awarded Citation No. **00** and propagated throughout all contributions, along with the other zero citations. In order of the base value attached:  
@@ -28,4 +27,4 @@ Submission Contents: A git bundle of this repository containing the changes made
 
 Please also make a note of the commit you begin with, as this repository will be continuously updated.  
 
-
+#####  Concept © 2017 R.V. St. Denis. All Rights Reserved.
