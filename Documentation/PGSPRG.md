@@ -1,25 +1,26 @@
-### An N Point Proposal for Perpetual Globally Sourced Passive Revenue Generation
+## An N Point Proposal for  
+## Perpetual Globally Sourced Passive Revenue Generation
 #####  Concept © 2017 R.V. St. Denis. All Rights Reserved.
 
 ### PGSPRG submission contest
-The winning submission will be awarded Citation No. **00** and propoagated throughout all contributions, along with the other zero citations.  
+The winning submission will be awarded Citation No. **00** and propagated throughout all contributions, along with the other zero citations.  
 In order of the base value attached:  
 - Citation **0** Reserved  
 - Citation **00** Contest winner  
 - Citation **000** cdsAsync  
 
-#### Entry Part 1
-Complete the [License Builder Skill Script](../Skill/Open/buildLicense.il) and make the necessary "logical" alterations to the library  
+## Entry Part 1
+Complete the [License Builder Skill Script](../Skill/Open/buildLicense.il) and make the necessary "logical" alterations to the library.  
 In other words, extracting and parsing a note made in each drawing is highly suboptimal. Please use an alternate method of citation and extraction.  
 Be **creative** & *logical*.  
 
-#### Entry, Main Part
+## Entry, Main Part
 While the tool you develop will be highly useful, it serves as an entry point for something larger, as Part 1 is fairly straightforward given a basic understanding of SKILL and the IC toolsuite.  
 
-The following is a series of fictional scenarios used used to illustrate an idea, and bring a series of questions to light. 
+The following is a series of fictional scenarios used to illustrate an idea, and bring a series of questions to light. 
 
 #### Pricing Strategy
-Best insight thus far: A significant portion of the value wil be derived based on the number of "transactions". In other words, the more often a license is purchased, the more valueable it becomes.  
+Best insight thus far: A noteable portion of the value wil be derived based on the number of "transactions". In other words, the more often a license is purchased, the more valueable it becomes.  
 #####  Concept © 2017 R.P. Cavanaugh. All Rights Reserved.
 
 ### Your Proposal
@@ -34,3 +35,5 @@ Submission Contents: A git bundle of this repository containing the changes made
 Please also make a note of the commit you begin with, as this repository will be continuously updated.  
 
 #######  Concept © 2017 R.V. St. Denis. All Rights Reserved.
+
+
