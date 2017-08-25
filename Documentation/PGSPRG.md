@@ -1,5 +1,5 @@
 ### An N Point Proposal for Perpetual Globally Sourced Passive Revenue Generation
-#######  Concept © 2017 R.V. St. Denis. All Rights Reserved.
+#####  Concept © 2017 R.V. St. Denis. All Rights Reserved.
 
 ### PGSPRG submission contest
 The winning submission will be awarded Citation No. **00** and propoagated throughout all contributions, along with the other zero citations.  
@@ -20,7 +20,7 @@ The following is a series of fictional scenarios used used to illustrate an idea
 
 #### Pricing Strategy
 Best insight thus far: A significant portion of the value wil be derived based on the number of "transactions". In other words, the more often a license is purchased, the more valueable it becomes.  
-#######  Concept © 2017 R.P. Cavanaugh. All Rights Reserved.
+#####  Concept © 2017 R.P. Cavanaugh. All Rights Reserved.
 
 ### Your Proposal
 Should be titled PGSPRG_Npoints_YourOrganization.pdf and be located in the Documentation folder.  
