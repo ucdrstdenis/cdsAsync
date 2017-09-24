@@ -8,7 +8,7 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 ### [Library Preview](https://ucdrstdenis.github.io/cdsAsync/Documentation/Preview.pdf#page=1&zoom=100)
 
 ## Documentation
-[Quickstart Usage](Documentation/Quickstart.md)
+[Quickstart Usage](Documentation/Quickstart.md)  
 [Intro to Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/Excerpt.pdf)
 
 ### Library Citations 
