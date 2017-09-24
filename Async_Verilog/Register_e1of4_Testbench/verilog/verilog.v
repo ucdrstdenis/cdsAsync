@@ -92,14 +92,9 @@ endtask
 initial begin
     Init;
 
-   //for (i = 0; i < NO_TOKENS; i = i + 1) begin
-        //SendTokens($urandom(), $urandom()%3);
-        SendTokens(2'b00, 2'b00);  // Read
-        SendTokens(2'b11, 2'b01);  // Write  
-        SendTokens(2'b00, 2'b00);  // Read
-        SendTokens(2'b00, 2'b01);  // Write
-        SendTokens(2'b00, 2'b00);  // Read
-  // end
+   for (i = 0; i < NO_TOKENS; i = i + 1) begin
+        SendTokens($urandom(), $urandom()%3);
+   end
 
     if (FINISH) begin
         #RST_HOLD;
@@ -117,7 +112,7 @@ end
 always @(posedge validRx) begin
     RxReg <= dataRx;
     RxTokenCount = RxTokenCount + 1;
-    $display(" %M: Rx data 0x%h @ time         %t ps", dataRx, $time);
+    $display(" %M: Rx data 0x%h @ time %t ps", dataRx, $time);
 end
 
 endmodule

@@ -1,6 +1,6 @@
 (turboOpts analogInstValue) nil
 (turboOpts analogSubcktValue) nil
-(turboOpts apsplus) nil
+(turboOpts apsplus) t
 (turboOpts cktpreset) "None"
 (turboOpts dcOPSolver) "APS"
 (turboOpts digitalInstValue) nil
@@ -23,7 +23,7 @@
 (turboOpts rcrNetFmax) nil
 (turboOpts spectreDecouplingCapacitorThreshold) ""
 (turboOpts spectreResistorShortingThreshold) ""
-(turboOpts uniMode) "Spectre"
+(turboOpts uniMode) "APS"
 (turboOpts virtualGroundNodes) nil
 (turboOpts virtualPowerNodeListBox) (nil choices nil value nil)
 (turboOpts virtualPowerNodeValue) nil

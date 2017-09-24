@@ -88,7 +88,7 @@ tmp10 = make_sevVariableStruct()
 tmp10 = (ncons nil)
 )
 tmp10->name = "vdd"
-tmp10->expression = "0.700"
+tmp10->expression = "0.500"
 tmp10->index = 10
 list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10)
 )

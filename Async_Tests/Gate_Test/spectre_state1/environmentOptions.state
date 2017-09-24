@@ -4,6 +4,7 @@
 (envOpts cpfIsVMSEnabled) t
 (envOpts emAnaType) "Dynamic"
 (envOpts emLayerMap) ""
+(envOpts emOnlyICTFile) ""
 (envOpts emTechFile) ""
 (envOpts emirEnable) nil
 (envOpts emirEnable_static) nil
@@ -27,8 +28,6 @@
 (envOpts savestate) "Y"
 (envOpts setTopLevelAsSubckt) nil
 (envOpts sst2usecolon) nil
-(envOpts stopViewList) ("spectre")
-(envOpts switchViewList) ("spectre" "cmos_sch" "cmos.sch" "schematic" "veriloga")
 (envOpts termDirectionMismatch) "ignore"
 (envOpts termMismatch) "ignore"
 (envOpts userCmdLineOption) ""

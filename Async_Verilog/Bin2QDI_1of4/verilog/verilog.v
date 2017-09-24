@@ -28,11 +28,10 @@ parameter idle=0, requesting=1, resetting=2;
 ////////////////////////////////////////////////////////////
 //    Ensure correct output behavior if poorly driven
 ////////////////////////////////////////////////////////////
-// Future note to self: Here for a reason. Don't optimize.
 task CheckRequest;
 begin
     if (state==requesting) begin
-        $display("Bin2QDI_1of4: Waiting on re. Possible driving error @time %t", $time);
+        // $display("Bin2QDI_1of4: Waiting on re. Possible driving error @time %t", $time);
     end else if (state==resetting) begin
         wait (Re);  
     end
@@ -42,7 +41,7 @@ endtask
 task CheckReset;
 begin
     if (state==requesting) begin
-        $display("Bin2QDI_1of4: Early reset. Possible driving error @time %t", $time);
+        // $display("Bin2QDI_1of4: Early reset. Possible driving error @time %t", $time);
         // wait(~Re);
         R <= #D2 4'h0;
         state = resetting;

@@ -1,0 +1,10 @@
+--pcdbVlog file, Rev:1.0
+
+#CELL
+* Bin2QDI_1of1 *
+Transmit<1:0> 2
+
+#CELL
+* QDI2Bin_1of2 *
+Receive
+

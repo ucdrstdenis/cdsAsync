@@ -27,6 +27,7 @@ setSkillPath('("." "~" "./Skill/"))
 
 ; Color splash set to F9
 loadi "colorSplash.il"
+printf( "Color Splash set to F9")
 
 ; Auto load ocean scripts after ADEXL simultion
 ;load("abXLRunAfterSim.ils")

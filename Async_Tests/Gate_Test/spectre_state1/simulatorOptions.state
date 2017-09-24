@@ -1,3 +1,6 @@
+(opts acDisableAll) nil
+(opts acEnableAll) nil
+(opts acSeverity) ""
 (opts additionalArgs) ""
 (opts ahdllint) ""
 (opts ahdllint_maxwarn) ""
@@ -12,6 +15,12 @@
 (opts cols) "80"
 (opts colslog) ""
 (opts convdbg) ""
+(opts dcDisableAll) nil
+(opts dcEnableAll) nil
+(opts dcOpDisableAll) nil
+(opts dcOpEnableAll) nil
+(opts dcOpSeverity) ""
+(opts dcSeverity) ""
 (opts dc_pivot_check) ""
 (opts debug) ""
 (opts diagnose) ""
@@ -48,11 +57,15 @@
 (opts minr) ""
 (opts multithread) ""
 (opts narrate) ""
+(opts noiseDisableAll) nil
+(opts noiseEnableAll) nil
 (opts noiseOffType) (nil nil nil nil nil)
 (opts noiseOnType) (nil nil nil nil nil)
+(opts noiseSeverity) ""
 (opts nonconv_topnum) ""
 (opts notation) ""
 (opts note) ""
+(opts nport_default_passivity) ""
 (opts nportcompress) ""
 (opts nportcompressfiledir) ""
 (opts nportirfiledir) ""
@@ -66,6 +79,9 @@
 (opts pivrel) "1e-3"
 (opts preorder) ""
 (opts printstep) ""
+(opts pzDisableAll) nil
+(opts pzEnableAll) nil
+(opts pzSeverity) ""
 (opts quantities) ""
 (opts rabsclamp) ""
 (opts rabsshort) ""
@@ -84,12 +100,21 @@
 (opts sensformat) ""
 (opts senstype) ""
 (opts simstat) ""
+(opts spDisableAll) nil
+(opts spEnableAll) nil
+(opts spSeverity) ""
 (opts temp) "25.0"
 (opts tempeffects) ""
 (opts title) ""
 (opts tmevthmod) ""
 (opts tnom) "27"
 (opts topcheck) ""
+(opts tranCheckWindows) ""
+(opts tranDisableAll) nil
+(opts tranEnableAll) nil
+(opts tranSeverity) ""
+(opts tranStartTime) ""
+(opts tranStopTime) ""
 (opts try_fast_op) ""
 (opts vabstol) "1e-6"
 (opts value1) ""

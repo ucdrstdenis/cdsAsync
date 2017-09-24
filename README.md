@@ -3,13 +3,13 @@
 [![License](https://img.shields.io/badge/license-BSD-blue.svg?style=plastic)](LICENSE)
 
 cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites.
-It is currently in development at [UC Davis](http://www.ece.ucdavis.edu/), and designed with customization, modularity, and automation of analysis in mind.
+It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with customization, modularity, and automation of analysis in mind.
 
 ### [Library Preview](https://ucdrstdenis.github.io/cdsAsync/Documentation/Preview.pdf#page=1&zoom=100)
 
 ## Documentation
-[Quickstart Usage](Documentation/Quickstart.md)  
-[Contribute](Documentation/Contribute.md)  
+[Quickstart Usage](Documentation/Quickstart.md)
+[Intro to Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/Excerpt.pdf)
 
 ### Library Citations 
 1.  [ASAP7: A 7-nm FinFET Predictive Process Design Kit](http://www.sciencedirect.com/science/article/pii/S002626921630026X)
@@ -24,10 +24,8 @@ It is currently in development at [UC Davis](http://www.ece.ucdavis.edu/), and d
 10.  [An Energy Estimation Method for Asynchronous Circuits with Application to an Asynchronous Microprocessor](http://ieeexplore.ieee.org/document/999207/)
 11. [Resetting Asynchronous QDI Systems](http://thesis.library.caltech.edu/7968/1/thesis.pdf)
 12. [Resililent Design Methodology for Energy-Efficient SRAM](https://pdfs.semanticscholar.org/f47a/1d50447301f56ee9ffc17fe7ec7c67e33357.pdf?_ga=2.140428275.1186140395.1499304491-1962221572.1498409188)
- * Additional citations to be added ...
+13. [An Asynchronous Floating-Point Multiplier](http://ieeexplore.ieee.org/document/6243886/)
 
-### Upcoming Citations
- - [An Asynchronous Floating-Point Multiplier](http://ieeexplore.ieee.org/document/6243886/)
 
 ### [Acknowledgements](Documentation/Acknowledge.md)
 

@@ -33,6 +33,7 @@ t
 procedure( colorSplash() 
     CCSsetWireColorAndStyle("VDD"   ?color "magenta")
     CCSsetWireColorAndStyle("VDDT!" ?color "magenta")
+    CCSsetWireColorAndStyle("VDDT"  ?color "magenta")
     CCSsetWireColorAndStyle("vdd!"  ?color "magenta")
     CCSsetWireColorAndStyle("GND"   ?color "violet")
     CCSsetWireColorAndStyle("gnd!"  ?color "violet")
