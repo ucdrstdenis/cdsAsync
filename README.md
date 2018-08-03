@@ -1,6 +1,6 @@
 # cdsAsync
-[![homebrew](https://img.shields.io/badge/Homebrew-v0.97.0-0000ff.svg?style=plastic)](README.md)
-[![License](https://img.shields.io/badge/License-BSD-ff0000.svg?style=plastic)](LICENSE)
+[![cdsAsync](https://img.shields.io/badge/cdsAsync-v0.97.0-0000ff.svg?style=plastic)](README.md)
+[![License](https://img.shields.io/badge/license-mBSD-ff0000.svg?style=plastic)](LICENSE)
 
 cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites.
 It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with customization, modularity, and automation of analysis in mind.
@@ -9,6 +9,7 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 
 ## Documentation
 [Quickstart Usage](Documentation/Quickstart.md)  
+[QDI Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/RS_2017_Excerpts.pdf#page=5) 
 
 ### Library Citations 
 1.  [ASAP7: A 7-nm FinFET Predictive Process Design Kit](http://www.sciencedirect.com/science/article/pii/S002626921630026X)
@@ -22,7 +23,7 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 9.  [Asynchronous Techniques for System-on-Chip Design](http://www.async.caltech.edu/Pubs/PDF/2006_ieee_soc.pdf)
 10.  [An Energy Estimation Method for Asynchronous Circuits with Application to an Asynchronous Microprocessor](http://ieeexplore.ieee.org/document/999207/)
 11. [Resetting Asynchronous QDI Systems](http://thesis.library.caltech.edu/7968/1/thesis.pdf)
-12. [Resililent Design Methodology for Energy-Efficient SRAM](https://pdfs.semanticscholar.org/f47a/1d50447301f56ee9ffc17fe7ec7c67e33357.pdf?_ga=2.140428275.1186140395.1499304491-1962221572.1498409188)
+12. [Resililent Design Methodology for Energy-Efficient SRAM](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-37.html)
 13. [An Asynchronous Floating-Point Multiplier](http://ieeexplore.ieee.org/document/6243886/)
 
 
