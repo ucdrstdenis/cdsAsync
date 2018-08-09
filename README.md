@@ -9,7 +9,6 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 
 ## Documentation
 [Quickstart Usage](Documentation/Quickstart.md)  
-[Prologue](https://ucdrstdenis.github.io/cdsAsync/Documentation/RS_2017_Prologue.pdf#page=1)   
 [QDI Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/RS_2017_Excerpts.pdf#page=5) 
 
 ### Library Citations 
