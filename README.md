@@ -9,7 +9,7 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 
 ## Documentation
 [Quickstart Usage](Documentation/Quickstart.md)  
-[QDI Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/RS_2017_QDI_Excerpts.pdf#page=1) 
+[QDI Cell Design](https://ucdrstdenis.github.io/cdsAsync/Documentation/RS_2017_QDI_Excerpts.pdf#page=6) 
 
 ### Library Citations 
 1.  [ASAP7: A 7-nm FinFET Predictive Process Design Kit](http://www.sciencedirect.com/science/article/pii/S002626921630026X)

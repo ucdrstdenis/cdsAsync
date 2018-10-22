@@ -7,7 +7,7 @@ virtuoso &
 ```
 
 ## PDK Integration
-* For use with the [ASAP 7nm PDK](http://asap.asu.edu/asap/), please see download the original PDK from ASU and see the [usage instructions](../Documentation/Usage.md).
+* For use with the [ASAP 7nm PDK](http://asap.asu.edu/asap/), please download the original PDK from ASU and see the [usage instructions](../Documentation/Usage.md).
 * For use with an alternative PDK, run the [CCSinstReplace.il](../Skill/CCSinstReplace.il) skill script to find and replace all transistors with those from the desired PDK library.
 
 ### Data Generation \& Automation of Analysis
