@@ -4,6 +4,8 @@
 
 cdsAsync is an open-source asynchronous toolset & schematic library for Cadence Virtuoso and simulation suites.
 
+It was a graduate project developed during Spring 2017 at UC Davis.
+
 ### [Library Preview](https://ucdrstdenis.github.io/cdsAsync/Documentation/Preview.pdf#page=1&zoom=100)
 
 ## Documentation
