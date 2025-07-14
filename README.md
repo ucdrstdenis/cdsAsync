@@ -2,10 +2,7 @@
 [![cdsAsync](https://img.shields.io/badge/cdsAsync-v0.97.0-0000ff.svg?style=plastic)](README.md)
 [![License](https://img.shields.io/badge/license-mBSD-ff0000.svg?style=plastic)](LICENSE)
 
-cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites.
-
-
-It was developed as a graduate project at UC Davis in 2017 and designed with customization, modularity, and automation of analysis in mind.
+cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites. It was developed as a graduate project at UC Davis in 2017 and designed with customization, modularity, and automation of analysis in mind.
 
 ### [Library Preview](https://ucdrstdenis.github.io/cdsAsync/Documentation/Preview.pdf#page=1&zoom=100)
 
