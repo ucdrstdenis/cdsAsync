@@ -2,8 +2,7 @@
 [![cdsAsync](https://img.shields.io/badge/cdsAsync-v0.97.0-0000ff.svg?style=plastic)](README.md)
 [![License](https://img.shields.io/badge/license-mBSD-ff0000.svg?style=plastic)](LICENSE)
 
-cdsAsync is an open-source asynchronous toolset & schematic library built for use with Cadence IC (virtuoso) and simulation suites.
-It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with customization, modularity, and automation of analysis in mind.
+cdsAsync is an open-source asynchronous toolset & schematic library for Cadence Virtuoso and simulation suites.
 
 ### [Library Preview](https://ucdrstdenis.github.io/cdsAsync/Documentation/Preview.pdf#page=1&zoom=100)
 
@@ -25,9 +24,6 @@ It is developed at [UC Davis](http://www.ece.ucdavis.edu/), and designed with cu
 11. [Resetting Asynchronous QDI Systems](http://thesis.library.caltech.edu/7968/1/thesis.pdf)
 12. [Resililent Design Methodology for Energy-Efficient SRAM](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-37.html)
 13. [An Asynchronous Floating-Point Multiplier](http://ieeexplore.ieee.org/document/6243886/)
-
-
-### [Acknowledgements](Documentation/Acknowledge.md)
 
 #### License and Citation
 This library is released under a modified [BSD 2-Clause license.](LICENSE)  
